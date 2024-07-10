@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		94A1C3BB2C3EB1A40018D02F /* DigitalWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3BA2C3EB1A40018D02F /* DigitalWalletApp.swift */; };
-		94A1C3BD2C3EB1A40018D02F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3BC2C3EB1A40018D02F /* ContentView.swift */; };
 		94A1C3BF2C3EB1A60018D02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */; };
-		94A1C3C22C3EB1A60018D02F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A1C3C12C3EB1A60018D02F /* Preview Assets.xcassets */; };
 		94A1C3CC2C3EB1A60018D02F /* DigitalWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3CB2C3EB1A60018D02F /* DigitalWalletTests.swift */; };
 		94A1C3D62C3EB1A60018D02F /* DigitalWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3D52C3EB1A60018D02F /* DigitalWalletUITests.swift */; };
 		94A1C3D82C3EB1A60018D02F /* DigitalWalletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3D72C3EB1A60018D02F /* DigitalWalletUITestsLaunchTests.swift */; };
+		94A1C3EF2C3EBD180018D02F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3EE2C3EBD180018D02F /* SplashView.swift */; };
+		94A1C3F12C3EBFE00018D02F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3F02C3EBFE00018D02F /* RegisterView.swift */; };
+		94A1C3F32C3EBFEC0018D02F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3F22C3EBFEC0018D02F /* LoginView.swift */; };
+		94A1C3F62C3EC0160018D02F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3F52C3EC0160018D02F /* LoginViewModel.swift */; };
+		94A1C3F82C3EC0220018D02F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3F72C3EC0220018D02F /* RegisterViewModel.swift */; };
+		94A1C3FD2C3EC0AF0018D02F /* AuhtenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3FC2C3EC0AF0018D02F /* AuhtenticationService.swift */; };
+		94A1C3FF2C3EC11D0018D02F /* AuhtenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3FE2C3EC11D0018D02F /* AuhtenticationServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +41,19 @@
 /* Begin PBXFileReference section */
 		94A1C3B72C3EB1A40018D02F /* DigitalWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A1C3BA2C3EB1A40018D02F /* DigitalWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalWalletApp.swift; sourceTree = "<group>"; };
-		94A1C3BC2C3EB1A40018D02F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		94A1C3C12C3EB1A60018D02F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		94A1C3C72C3EB1A60018D02F /* DigitalWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitalWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A1C3CB2C3EB1A60018D02F /* DigitalWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalWalletTests.swift; sourceTree = "<group>"; };
 		94A1C3D12C3EB1A60018D02F /* DigitalWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitalWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A1C3D52C3EB1A60018D02F /* DigitalWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalWalletUITests.swift; sourceTree = "<group>"; };
 		94A1C3D72C3EB1A60018D02F /* DigitalWalletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalWalletUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		94A1C3EE2C3EBD180018D02F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		94A1C3F02C3EBFE00018D02F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		94A1C3F22C3EBFEC0018D02F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		94A1C3F52C3EC0160018D02F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		94A1C3F72C3EC0220018D02F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		94A1C3FC2C3EC0AF0018D02F /* AuhtenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuhtenticationService.swift; sourceTree = "<group>"; };
+		94A1C3FE2C3EC11D0018D02F /* AuhtenticationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuhtenticationServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,20 +104,19 @@
 		94A1C3B92C3EB1A40018D02F /* DigitalWallet */ = {
 			isa = PBXGroup;
 			children = (
-				94A1C3BA2C3EB1A40018D02F /* DigitalWalletApp.swift */,
-				94A1C3BC2C3EB1A40018D02F /* ContentView.swift */,
-				94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */,
-				94A1C3C02C3EB1A60018D02F /* Preview Content */,
+				94A1C40B2C3EC4DA0018D02F /* Enums */,
+				94A1C40A2C3EC4AF0018D02F /* Components */,
+				94A1C4072C3EC4780018D02F /* Extensions */,
+				94A1C4022C3EC19F0018D02F /* Utilities */,
+				94A1C3F92C3EC0310018D02F /* Services */,
+				94A1C3FB2C3EC0840018D02F /* Protocols */,
+				94A1C3E82C3EBC6D0018D02F /* Coordinators */,
+				94A1C4052C3EC2970018D02F /* Models */,
+				94A1C3E42C3EBB130018D02F /* ViewModels */,
+				94A1C3E52C3EBB1B0018D02F /* Views */,
+				94A1C3E62C3EBC110018D02F /* Resources */,
 			);
 			path = DigitalWallet;
-			sourceTree = "<group>";
-		};
-		94A1C3C02C3EB1A60018D02F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				94A1C3C12C3EB1A60018D02F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		94A1C3CA2C3EB1A60018D02F /* DigitalWalletTests */ = {
@@ -125,6 +134,156 @@
 				94A1C3D72C3EB1A60018D02F /* DigitalWalletUITestsLaunchTests.swift */,
 			);
 			path = DigitalWalletUITests;
+			sourceTree = "<group>";
+		};
+		94A1C3E42C3EBB130018D02F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3F42C3EBFFA0018D02F /* Authentication */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		94A1C3E52C3EBB1B0018D02F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3E72C3EBC670018D02F /* Authentication */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		94A1C3E62C3EBC110018D02F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3BA2C3EB1A40018D02F /* DigitalWalletApp.swift */,
+				94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		94A1C3E72C3EBC670018D02F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3EB2C3EBCD80018D02F /* Splash */,
+				94A1C3EA2C3EBCC30018D02F /* Register */,
+				94A1C3E92C3EBCBD0018D02F /* Login */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		94A1C3E82C3EBC6D0018D02F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		94A1C3E92C3EBCBD0018D02F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3F22C3EBFEC0018D02F /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		94A1C3EA2C3EBCC30018D02F /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3F02C3EBFE00018D02F /* RegisterView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		94A1C3EB2C3EBCD80018D02F /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3EE2C3EBD180018D02F /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		94A1C3F42C3EBFFA0018D02F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3F52C3EC0160018D02F /* LoginViewModel.swift */,
+				94A1C3F72C3EC0220018D02F /* RegisterViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		94A1C3F92C3EC0310018D02F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3FA2C3EC0380018D02F /* AuthenticationService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		94A1C3FA2C3EC0380018D02F /* AuthenticationService */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3FC2C3EC0AF0018D02F /* AuhtenticationService.swift */,
+			);
+			path = AuthenticationService;
+			sourceTree = "<group>";
+		};
+		94A1C3FB2C3EC0840018D02F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3FE2C3EC11D0018D02F /* AuhtenticationServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		94A1C4022C3EC19F0018D02F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C4042C3EC1BC0018D02F /* Helpers */,
+				94A1C4032C3EC1AE0018D02F /* Constants */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		94A1C4032C3EC1AE0018D02F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		94A1C4042C3EC1BC0018D02F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		94A1C4052C3EC2970018D02F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94A1C4072C3EC4780018D02F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94A1C40A2C3EC4AF0018D02F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		94A1C40B2C3EC4DA0018D02F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +390,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A1C3C22C3EB1A60018D02F /* Preview Assets.xcassets in Resources */,
 				94A1C3BF2C3EB1A60018D02F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +415,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A1C3BD2C3EB1A40018D02F /* ContentView.swift in Sources */,
+				94A1C3F12C3EBFE00018D02F /* RegisterView.swift in Sources */,
+				94A1C3FF2C3EC11D0018D02F /* AuhtenticationServiceProtocol.swift in Sources */,
+				94A1C3F82C3EC0220018D02F /* RegisterViewModel.swift in Sources */,
 				94A1C3BB2C3EB1A40018D02F /* DigitalWalletApp.swift in Sources */,
+				94A1C3F32C3EBFEC0018D02F /* LoginView.swift in Sources */,
+				94A1C3F62C3EC0160018D02F /* LoginViewModel.swift in Sources */,
+				94A1C3EF2C3EBD180018D02F /* SplashView.swift in Sources */,
+				94A1C3FD2C3EC0AF0018D02F /* AuhtenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -421,7 +585,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DigitalWallet/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -449,7 +613,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DigitalWallet/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
