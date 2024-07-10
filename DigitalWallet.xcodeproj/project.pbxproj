@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9450A1682C3ED038008949B3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9450A1672C3ED038008949B3 /* Color+Extension.swift */; };
+		9450A16B2C3ED04D008949B3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9450A16A2C3ED04D008949B3 /* CustomButton.swift */; };
 		94A1C3BB2C3EB1A40018D02F /* DigitalWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3BA2C3EB1A40018D02F /* DigitalWalletApp.swift */; };
 		94A1C3BF2C3EB1A60018D02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */; };
 		94A1C3CC2C3EB1A60018D02F /* DigitalWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3CB2C3EB1A60018D02F /* DigitalWalletTests.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9450A1672C3ED038008949B3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		9450A16A2C3ED04D008949B3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		94A1C3B72C3EB1A40018D02F /* DigitalWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A1C3BA2C3EB1A40018D02F /* DigitalWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalWalletApp.swift; sourceTree = "<group>"; };
 		94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 		94A1C4072C3EC4780018D02F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9450A1672C3ED038008949B3 /* Color+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 		94A1C40A2C3EC4AF0018D02F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9450A16A2C3ED04D008949B3 /* CustomButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -416,8 +422,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A1C3F12C3EBFE00018D02F /* RegisterView.swift in Sources */,
+				9450A1682C3ED038008949B3 /* Color+Extension.swift in Sources */,
 				94A1C3FF2C3EC11D0018D02F /* AuhtenticationServiceProtocol.swift in Sources */,
 				94A1C3F82C3EC0220018D02F /* RegisterViewModel.swift in Sources */,
+				9450A16B2C3ED04D008949B3 /* CustomButton.swift in Sources */,
 				94A1C3BB2C3EB1A40018D02F /* DigitalWalletApp.swift in Sources */,
 				94A1C3F32C3EBFEC0018D02F /* LoginView.swift in Sources */,
 				94A1C3F62C3EC0160018D02F /* LoginViewModel.swift in Sources */,
