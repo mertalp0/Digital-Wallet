@@ -11,8 +11,8 @@ import Foundation
 protocol AuthenticationServiceProtocol {
     func login(email: String,
                password: String,
-               completion : @escaping(Result<User,Error>)-> Void)
-    
+               completion : @escaping(Result<UserModel,Error>)-> Void)
+
     func register(fullname: String,
                   email:String,
                   password:String,

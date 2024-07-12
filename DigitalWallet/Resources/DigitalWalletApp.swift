@@ -27,7 +27,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct DigitalWalletApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            LoginView()
         }
     }
 }
