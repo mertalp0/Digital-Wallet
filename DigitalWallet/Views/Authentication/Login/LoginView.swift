@@ -8,26 +8,29 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var fullName: String = "" // State for storing full name
-    @State private var email: String = "" // State for storing full name
+    @StateObject private var viewModel = LoginViewModel() // Initialize 
+
 
     var body: some View {
-        VStack(alignment:.center){
+        VStack(){
             
-            Text("Welcome!")
+            Text("")
                 .font(.caption2)
                 .bold() // Placeholder text
 
-            Text("Please provide following details for your new account") // Placeholder text
+            Text("") // Placeholder text
             
-            CustomTextField(placeholder: "email", text: $fullName)
-            CustomTextField(placeholder: "password", text: $email)
-            CustomButton(title: "Login", action: {
-                
-            }, size: .large)
+            CustomTextField(placeholder: "email", text: $viewModel.email)
+            CustomTextField(placeholder: "password", text: $viewModel.password)
+            CustomButton(title: "Login",  size: .large ,action: {
+                viewModel.login { result in
+                }
+            })
       
            
-        }
+        }.alert(isPresented: $viewModel.showAlert, content: {
+            Alert(title: Text(viewModel.alertMessage))
+        })
         .padding()
     }
 }

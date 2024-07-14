@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @StateObject private var viewModel = RegisterViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            CustomTextField(placeholder: "full name", text: $viewModel.fullname)
+            CustomTextField(placeholder: "email", text: $viewModel.email)
+            CustomTextField(placeholder: "password", text: $viewModel.password)
+            CustomTextField(placeholder: "confirm password", text: $viewModel.confirmPassword)
+            
+            CustomCheckBox(isChecked: $viewModel.isChecked)
+            CustomButton(title: "Register", size: .large) {
+                viewModel.register { result in
+                    
+                }
+                
+            }
+            Button(action: {
+                
+            }, label: {
+                Text("Sign in")
+            })
+        }.alert(isPresented: $viewModel.showAlert, content: {
+            Alert(title: Text(viewModel.alertMessage))
+        })
     }
 }
 
 #Preview {
     RegisterView()
 }
+

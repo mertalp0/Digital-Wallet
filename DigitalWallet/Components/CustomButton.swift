@@ -7,9 +7,9 @@
 import SwiftUI
 struct CustomButton : View {
     var title: String
-    var action: () -> Void
     var color: Color? = .blue
     var size: ButtonSize 
+    var action: () -> Void
     
     var body: some View {
         VStack {

@@ -56,7 +56,12 @@ class AuthenticationService: AuthenticationServiceProtocol {
                     completion(.failure(error))
                     return
                 }
-                
+                user.sendEmailVerification { error in
+                    if let error = error {
+                        completion(.failure(error))
+                        return
+                    }
+                }
                 completion(.success(true))
             }
         }
