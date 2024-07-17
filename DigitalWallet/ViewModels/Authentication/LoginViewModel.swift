@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import SwiftUI
+
 
 class LoginViewModel: ObservableObject {
     @Published var email: String = ""
@@ -14,6 +16,28 @@ class LoginViewModel: ObservableObject {
     @Published var alertMessage: String = ""
     @Published var showAlert: Bool = false
     
+    private let onTapRegister: () -> Void
+    private var didCallOnAppearForTheFirstTime = false
+
+    init( onTapRegister: @escaping () -> Void) {
+
+        self.onTapRegister = onTapRegister
+    }
+
+    func onAppear() {
+        guard didCallOnAppearForTheFirstTime == false else {
+            return
+        }
+        didCallOnAppearForTheFirstTime = true
+    }
+
+    func goToRegister() {
+        onTapRegister()
+    }
+    
+   
+        
+
     func login(completion: @escaping (Result<UserModel, Error>) -> Void) {
         
         let validationResult = Validator.loginValid(email: email, password: password)

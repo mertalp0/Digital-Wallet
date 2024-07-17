@@ -8,35 +8,28 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject private var viewModel = LoginViewModel() // Initialize 
-
+    @ObservedObject var viewModel: LoginViewModel
 
     var body: some View {
-        VStack(){
-            
-            Text("")
-                .font(.caption2)
-                .bold() // Placeholder text
-
-            Text("") // Placeholder text
-            
-            CustomTextField(placeholder: "email", text: $viewModel.email)
-            CustomTextField(placeholder: "password", text: $viewModel.password)
-            CustomButton(title: "Login",  size: .large ,action: {
-                viewModel.login { result in
-                }
-            })
-      
-           
-        }.alert(isPresented: $viewModel.showAlert, content: {
+        VStack {
+            CustomTextField(placeholder: "Email", text: $viewModel.email)
+            CustomTextField(placeholder: "Password", text: $viewModel.password)
+            CustomButton(title: "Login", size: .large) {
+                viewModel.login { result in }
+            }
+            Button("go to Register") {
+                 viewModel.goToRegister()
+            }
+        }
+        .alert(isPresented: $viewModel.showAlert) {
             Alert(title: Text(viewModel.alertMessage))
-        })
+        }
         .padding()
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(viewModel: LoginViewModel(onTapRegister: {}))
     }
 }

@@ -18,7 +18,7 @@ class RegisterViewModel: ObservableObject {
     @Published var alertMessage: String = ""
     @Published var showAlert: Bool = false
     
-    
+
     
     func register(completion: @escaping (Result<Bool, Error>) -> Void) {
         // Validate inputs before registration

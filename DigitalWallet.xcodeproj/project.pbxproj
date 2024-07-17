@@ -15,7 +15,7 @@
 		9450A1682C3ED038008949B3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9450A1672C3ED038008949B3 /* Color+Extension.swift */; };
 		9450A16B2C3ED04D008949B3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9450A16A2C3ED04D008949B3 /* CustomButton.swift */; };
 		9492EE862C3FA5BF00FA0947 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE852C3FA5BF00FA0947 /* CardModel.swift */; };
-		9492EE882C3FA5D400FA0947 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE872C3FA5D400FA0947 /* AppCoordinator.swift */; };
+		9492EE882C3FA5D400FA0947 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE872C3FA5D400FA0947 /* LoginCoordinator.swift */; };
 		9492EE8A2C3FA5E900FA0947 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE892C3FA5E900FA0947 /* Constant.swift */; };
 		9492EE8C2C3FA63100FA0947 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE8B2C3FA63100FA0947 /* Validator.swift */; };
 		9492EE932C3FACC000FA0947 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9492EE922C3FACC000FA0947 /* FirebaseAnalytics */; };
@@ -25,7 +25,7 @@
 		9492EE9B2C3FACC100FA0947 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9492EE9A2C3FACC100FA0947 /* FirebaseStorage */; };
 		9492EE9D2C3FAD0100FA0947 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9492EE9C2C3FAD0100FA0947 /* GoogleService-Info.plist */; };
 		9492EEA02C3FB49A00FA0947 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE9F2C3FB49A00FA0947 /* SplashCoordinator.swift */; };
-		94A1C3BB2C3EB1A40018D02F /* DigitalWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3BA2C3EB1A40018D02F /* DigitalWalletApp.swift */; };
+		94A1C3BB2C3EB1A40018D02F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3BA2C3EB1A40018D02F /* AppDelegate.swift */; };
 		94A1C3BF2C3EB1A60018D02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */; };
 		94A1C3CC2C3EB1A60018D02F /* DigitalWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3CB2C3EB1A60018D02F /* DigitalWalletTests.swift */; };
 		94A1C3D62C3EB1A60018D02F /* DigitalWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3D52C3EB1A60018D02F /* DigitalWalletUITests.swift */; };
@@ -37,6 +37,8 @@
 		94A1C3F82C3EC0220018D02F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3F72C3EC0220018D02F /* RegisterViewModel.swift */; };
 		94A1C3FD2C3EC0AF0018D02F /* AuhtenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3FC2C3EC0AF0018D02F /* AuhtenticationService.swift */; };
 		94A1C3FF2C3EC11D0018D02F /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3FE2C3EC11D0018D02F /* AuthenticationServiceProtocol.swift */; };
+		94B229622C47215000A8AE58 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229612C47215000A8AE58 /* RegisterCoordinator.swift */; };
+		94B229642C47C6EC00A8AE58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,13 +67,13 @@
 		9450A1672C3ED038008949B3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		9450A16A2C3ED04D008949B3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		9492EE852C3FA5BF00FA0947 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
-		9492EE872C3FA5D400FA0947 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9492EE872C3FA5D400FA0947 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		9492EE892C3FA5E900FA0947 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		9492EE8B2C3FA63100FA0947 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		9492EE9C2C3FAD0100FA0947 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9492EE9F2C3FB49A00FA0947 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		94A1C3B72C3EB1A40018D02F /* DigitalWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		94A1C3BA2C3EB1A40018D02F /* DigitalWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalWalletApp.swift; sourceTree = "<group>"; };
+		94A1C3BA2C3EB1A40018D02F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94A1C3C72C3EB1A60018D02F /* DigitalWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitalWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A1C3CB2C3EB1A60018D02F /* DigitalWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalWalletTests.swift; sourceTree = "<group>"; };
@@ -85,6 +87,9 @@
 		94A1C3F72C3EC0220018D02F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		94A1C3FC2C3EC0AF0018D02F /* AuhtenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuhtenticationService.swift; sourceTree = "<group>"; };
 		94A1C3FE2C3EC11D0018D02F /* AuthenticationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceProtocol.swift; sourceTree = "<group>"; };
+		94B229612C47215000A8AE58 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		94B2297B2C47F98800A8AE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +153,8 @@
 		94A1C3B92C3EB1A40018D02F /* DigitalWallet */ = {
 			isa = PBXGroup;
 			children = (
+				94B2297B2C47F98800A8AE58 /* Info.plist */,
+				94B229732C47F3A800A8AE58 /* New Group */,
 				944398322C41390A00D8453E /* Enums */,
 				94A1C3E82C3EBC6D0018D02F /* Coordinators */,
 				9492EE9C2C3FAD0100FA0947 /* GoogleService-Info.plist */,
@@ -200,8 +207,9 @@
 		94A1C3E62C3EBC110018D02F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				94A1C3BA2C3EB1A40018D02F /* DigitalWalletApp.swift */,
+				94A1C3BA2C3EB1A40018D02F /* AppDelegate.swift */,
 				94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */,
+				94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -219,7 +227,8 @@
 		94A1C3E82C3EBC6D0018D02F /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				9492EE872C3FA5D400FA0947 /* AppCoordinator.swift */,
+				9492EE872C3FA5D400FA0947 /* LoginCoordinator.swift */,
+				94B229612C47215000A8AE58 /* RegisterCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -333,6 +342,13 @@
 				944398372C43FD3900D8453E /* CustomCheckBox.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		94B229732C47F3A800A8AE58 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,20 +494,22 @@
 				944398362C415D3F00D8453E /* ErrorMessages.swift in Sources */,
 				944398382C43FD3900D8453E /* CustomCheckBox.swift in Sources */,
 				944398342C41391500D8453E /* ButtonSize.swift in Sources */,
-				9492EE882C3FA5D400FA0947 /* AppCoordinator.swift in Sources */,
+				9492EE882C3FA5D400FA0947 /* LoginCoordinator.swift in Sources */,
 				9492EEA02C3FB49A00FA0947 /* SplashCoordinator.swift in Sources */,
 				94A1C3F12C3EBFE00018D02F /* RegisterView.swift in Sources */,
 				9492EE862C3FA5BF00FA0947 /* CardModel.swift in Sources */,
+				94B229642C47C6EC00A8AE58 /* SceneDelegate.swift in Sources */,
 				9450A1682C3ED038008949B3 /* Color+Extension.swift in Sources */,
 				9492EE8C2C3FA63100FA0947 /* Validator.swift in Sources */,
 				94A1C3FF2C3EC11D0018D02F /* AuthenticationServiceProtocol.swift in Sources */,
 				94A1C3F82C3EC0220018D02F /* RegisterViewModel.swift in Sources */,
 				944398302C412C6900D8453E /* CustomTextField.swift in Sources */,
 				9450A16B2C3ED04D008949B3 /* CustomButton.swift in Sources */,
-				94A1C3BB2C3EB1A40018D02F /* DigitalWalletApp.swift in Sources */,
+				94A1C3BB2C3EB1A40018D02F /* AppDelegate.swift in Sources */,
 				9443982E2C412B6E00D8453E /* UserModel.swift in Sources */,
 				94A1C3F32C3EBFEC0018D02F /* LoginView.swift in Sources */,
 				9492EE8A2C3FA5E900FA0947 /* Constant.swift in Sources */,
+				94B229622C47215000A8AE58 /* RegisterCoordinator.swift in Sources */,
 				94A1C3F62C3EC0160018D02F /* LoginViewModel.swift in Sources */,
 				94A1C3EF2C3EBD180018D02F /* SplashView.swift in Sources */,
 				94A1C3FD2C3EC0AF0018D02F /* AuhtenticationService.swift in Sources */,
@@ -660,7 +678,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = DigitalWallet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -688,7 +706,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = DigitalWallet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
