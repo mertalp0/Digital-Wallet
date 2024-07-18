@@ -16,12 +16,14 @@ class LoginViewModel: ObservableObject {
     @Published var alertMessage: String = ""
     @Published var showAlert: Bool = false
     
-    private let onTapRegister: () -> Void
+    private let goToRegisterView: () -> Void
+    private let goToHomeView: () -> Void
+
     private var didCallOnAppearForTheFirstTime = false
 
-    init( onTapRegister: @escaping () -> Void) {
-
-        self.onTapRegister = onTapRegister
+    init( onTapRegister: @escaping () -> Void , onTapHome: @escaping ()-> Void ) {
+        self.goToRegisterView = onTapRegister
+        self.goToHomeView = onTapHome
     }
 
     func onAppear() {
@@ -32,9 +34,11 @@ class LoginViewModel: ObservableObject {
     }
 
     func goToRegister() {
-        onTapRegister()
+        goToRegisterView()
     }
-    
+    func goToHome() {
+        goToHomeView()
+    }
    
         
 
@@ -42,13 +46,13 @@ class LoginViewModel: ObservableObject {
         
         let validationResult = Validator.loginValid(email: email, password: password)
                
-               guard validationResult.isValid else {
-                   self.alertMessage = validationResult.errorMessage ?? "Error"
-                   self.showAlert = true
-                   completion(.failure(NSError(domain: "LoginViewModel", code: 0, userInfo: [NSLocalizedDescriptionKey: self.alertMessage])))
-                   return
-               }
-       
+        guard validationResult.isValid else {
+            self.alertMessage = validationResult.errorMessage ?? "Error"
+            self.showAlert = true
+            completion(.failure(NSError(domain: "LoginViewModel", code: 0, userInfo: [NSLocalizedDescriptionKey: self.alertMessage])))
+            return
+        }
+
         isLoading = true
         AuthenticationService.shared.login(email: email, password: password) { result in
             DispatchQueue.main.async {

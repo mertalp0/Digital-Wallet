@@ -17,7 +17,7 @@ final class LoginCoordinator {
     }()
     
     func makeViewController() -> UIViewController {
-        let viewModel = LoginViewModel(onTapRegister: pushRegisterView)
+        let viewModel = LoginViewModel(onTapRegister: pushRegisterView , onTapHome: pushHomeView)
         let loginView = LoginView(viewModel: viewModel)
         let hostingVC = UIHostingController(rootView: loginView)
         navigationController.setViewControllers([hostingVC], animated: false)
@@ -25,6 +25,11 @@ final class LoginCoordinator {
     }
     func pushRegisterView() {
         let coordinator = RegisterCoordinator(navigationController: navigationController)
+        let registerView = coordinator.makeViewController()
+        navigationController.pushViewController(registerView, animated: true)
+    }
+    func pushHomeView() {
+        let coordinator = HomeCoordinator(navigationController: navigationController)
         let registerView = coordinator.makeViewController()
         navigationController.pushViewController(registerView, animated: true)
     }

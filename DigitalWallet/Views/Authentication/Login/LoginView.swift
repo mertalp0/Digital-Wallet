@@ -15,10 +15,16 @@ struct LoginView: View {
             CustomTextField(placeholder: "Email", text: $viewModel.email)
             CustomTextField(placeholder: "Password", text: $viewModel.password)
             CustomButton(title: "Login", size: .large) {
-                viewModel.login { result in }
+                viewModel.login { result in
+                 
+                    
+                }
             }
             Button("go to Register") {
                  viewModel.goToRegister()
+            }
+            Button("go to Home") {
+                viewModel.goToHome()
             }
         }
         .alert(isPresented: $viewModel.showAlert) {
@@ -30,6 +36,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(viewModel: LoginViewModel(onTapRegister: {}))
+        LoginView(viewModel: LoginViewModel(onTapRegister: {}, onTapHome: {}))
     }
 }

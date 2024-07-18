@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import UIKit
+
+class Constant {
+   static let height = UIScreen.main.bounds.height
+   static let width = UIScreen.main.bounds.width
+}

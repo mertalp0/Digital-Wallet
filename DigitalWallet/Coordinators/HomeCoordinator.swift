@@ -1,12 +1,13 @@
 //
-//  RegisterCoordinator.swift
+//  HomeCoordinator.swift
 //  DigitalWallet
 //
-//  Created by mert alp on 17.07.2024.
+//  Created by mert alp on 18.07.2024.
 //
+
 import SwiftUI
 
-class RegisterCoordinator: ObservableObject {
+class HomeCoordinator: ObservableObject {
     
     private weak var navigationController: UINavigationController?
 
@@ -15,9 +16,8 @@ class RegisterCoordinator: ObservableObject {
     }
     
     func makeViewController() -> UIViewController {
-        let view = RegisterView(
-            viewModel: RegisterViewModel())
-        let hostingVC = UIHostingController(rootView: view)
+        let view = HomeView()
+        let hostingVC = UIHostingController(rootView: view.navigationBarBackButtonHidden(true))
         return hostingVC
     }
 }

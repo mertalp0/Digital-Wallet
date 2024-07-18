@@ -39,6 +39,12 @@
 		94A1C3FF2C3EC11D0018D02F /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3FE2C3EC11D0018D02F /* AuthenticationServiceProtocol.swift */; };
 		94B229622C47215000A8AE58 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229612C47215000A8AE58 /* RegisterCoordinator.swift */; };
 		94B229642C47C6EC00A8AE58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */; };
+		94B229852C486C1E00A8AE58 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229842C486C1E00A8AE58 /* HomeView.swift */; };
+		94B229872C486C3400A8AE58 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229862C486C3400A8AE58 /* HomeCoordinator.swift */; };
+		94B2298A2C486C7F00A8AE58 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229892C486C7F00A8AE58 /* HomeViewModel.swift */; };
+		94B2298C2C491E4C00A8AE58 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2298B2C491E4C00A8AE58 /* ActivityCard.swift */; };
+		94B2298E2C49264C00A8AE58 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2298D2C49264C00A8AE58 /* AccountInfo.swift */; };
+		94B229902C49276D00A8AE58 /* ActivityCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2298F2C49276D00A8AE58 /* ActivityCardType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +96,12 @@
 		94B229612C47215000A8AE58 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		94B2297B2C47F98800A8AE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		94B229842C486C1E00A8AE58 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		94B229862C486C3400A8AE58 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		94B229892C486C7F00A8AE58 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		94B2298B2C491E4C00A8AE58 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		94B2298D2C49264C00A8AE58 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
+		94B2298F2C49276D00A8AE58 /* ActivityCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				944398332C41391500D8453E /* ButtonSize.swift */,
+				94B2298F2C49276D00A8AE58 /* ActivityCardType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -154,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				94B2297B2C47F98800A8AE58 /* Info.plist */,
-				94B229732C47F3A800A8AE58 /* New Group */,
 				944398322C41390A00D8453E /* Enums */,
 				94A1C3E82C3EBC6D0018D02F /* Coordinators */,
 				9492EE9C2C3FAD0100FA0947 /* GoogleService-Info.plist */,
@@ -191,6 +203,7 @@
 		94A1C3E42C3EBB130018D02F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				94B229882C486C7600A8AE58 /* Home */,
 				94A1C3F42C3EBFFA0018D02F /* Authentication */,
 			);
 			path = ViewModels;
@@ -199,6 +212,7 @@
 		94A1C3E52C3EBB1B0018D02F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				94B229832C486C1200A8AE58 /* Home */,
 				94A1C3E72C3EBC670018D02F /* Authentication */,
 			);
 			path = Views;
@@ -229,6 +243,7 @@
 			children = (
 				9492EE872C3FA5D400FA0947 /* LoginCoordinator.swift */,
 				94B229612C47215000A8AE58 /* RegisterCoordinator.swift */,
+				94B229862C486C3400A8AE58 /* HomeCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -340,15 +355,26 @@
 				9450A16A2C3ED04D008949B3 /* CustomButton.swift */,
 				9443982F2C412C6900D8453E /* CustomTextField.swift */,
 				944398372C43FD3900D8453E /* CustomCheckBox.swift */,
+				94B2298B2C491E4C00A8AE58 /* ActivityCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		94B229732C47F3A800A8AE58 /* New Group */ = {
+		94B229832C486C1200A8AE58 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				94B229842C486C1E00A8AE58 /* HomeView.swift */,
+				94B2298D2C49264C00A8AE58 /* AccountInfo.swift */,
 			);
-			path = "New Group";
+			path = Home;
+			sourceTree = "<group>";
+		};
+		94B229882C486C7600A8AE58 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				94B229892C486C7F00A8AE58 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,11 +517,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94B2298C2C491E4C00A8AE58 /* ActivityCard.swift in Sources */,
 				944398362C415D3F00D8453E /* ErrorMessages.swift in Sources */,
 				944398382C43FD3900D8453E /* CustomCheckBox.swift in Sources */,
 				944398342C41391500D8453E /* ButtonSize.swift in Sources */,
+				94B2298A2C486C7F00A8AE58 /* HomeViewModel.swift in Sources */,
 				9492EE882C3FA5D400FA0947 /* LoginCoordinator.swift in Sources */,
 				9492EEA02C3FB49A00FA0947 /* SplashCoordinator.swift in Sources */,
+				94B229872C486C3400A8AE58 /* HomeCoordinator.swift in Sources */,
 				94A1C3F12C3EBFE00018D02F /* RegisterView.swift in Sources */,
 				9492EE862C3FA5BF00FA0947 /* CardModel.swift in Sources */,
 				94B229642C47C6EC00A8AE58 /* SceneDelegate.swift in Sources */,
@@ -510,9 +539,12 @@
 				94A1C3F32C3EBFEC0018D02F /* LoginView.swift in Sources */,
 				9492EE8A2C3FA5E900FA0947 /* Constant.swift in Sources */,
 				94B229622C47215000A8AE58 /* RegisterCoordinator.swift in Sources */,
+				94B229902C49276D00A8AE58 /* ActivityCardType.swift in Sources */,
 				94A1C3F62C3EC0160018D02F /* LoginViewModel.swift in Sources */,
 				94A1C3EF2C3EBD180018D02F /* SplashView.swift in Sources */,
+				94B229852C486C1E00A8AE58 /* HomeView.swift in Sources */,
 				94A1C3FD2C3EC0AF0018D02F /* AuhtenticationService.swift in Sources */,
+				94B2298E2C49264C00A8AE58 /* AccountInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
