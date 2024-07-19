@@ -12,10 +12,12 @@ import FirebaseFirestore
 class AuthenticationService: AuthenticationServiceProtocol {
     static let shared = AuthenticationService()
     private let db = Firestore.firestore()
+    private let accountService :AccountServiceProtocol = AccountService()
     
     func getCurrentUser() -> User? {
          return Auth.auth().currentUser
      }
+    
     func login(email: String, password: String, completion: @escaping (Result<UserModel, Error>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error as NSError? {
@@ -24,23 +26,41 @@ class AuthenticationService: AuthenticationServiceProtocol {
             }
 
             guard let user = authResult?.user else {
-                //TODO: SERVICE WILL BE REGISTERED FOR ERRORS
                 completion(.failure(NSError(domain: "AuthenticationService", code: 0, userInfo: [NSLocalizedDescriptionKey: "User not found."])))
                 return
             }
 
             if user.isEmailVerified {
-                // TODO: Fetch data from Firebase with user.uid
-                let currentUser = UserModel(id: "", fullName: "", email: "", accountId: "", cards: [""])
-                completion(.success(currentUser))
-                
+                // Firestore'dan kullanıcı verilerini çek
+                let userRef = self.db.collection("users").document(user.uid)
+                userRef.getDocument { document, error in
+                    if let error = error {
+                        completion(.failure(error))
+                        return
+                    }
+
+                    guard let document = document, document.exists, let data = document.data() else {
+                        completion(.failure(NSError(domain: "AuthenticationService", code: 0, userInfo: [NSLocalizedDescriptionKey: "User data not found."])))
+                        return
+                    }
+
+                    guard let id = data["id"] as? String,
+                          let fullName = data["fullName"] as? String,
+                          let email = data["email"] as? String,
+                          let accountId = data["accountId"] as? String,
+                          let cards = data["cards"] as? [String] else {
+                        completion(.failure(NSError(domain: "AuthenticationService", code: 0, userInfo: [NSLocalizedDescriptionKey: "User data is corrupted."])))
+                        return
+                    }
+
+                    let currentUser = UserModel(id: id, fullName: fullName, email: email, accountId: accountId, cards: cards)
+                    completion(.success(currentUser))
+                }
             } else {
-                //TODO: SERVICE WILL BE REGISTERED FOR ERRORS
                 completion(.failure(NSError(domain: "AuthenticationService", code: 0, userInfo: [NSLocalizedDescriptionKey: "Email not verified."])))
             }
         }
     }
-    
     func register(fullname: String, email: String, password: String, completion: @escaping (Result<Bool, Error>) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
@@ -52,20 +72,31 @@ class AuthenticationService: AuthenticationServiceProtocol {
                 completion(.failure(NSError(domain: "AuthenticationService", code: 0, userInfo: [NSLocalizedDescriptionKey: "User not created."])))
                 return
             }
-            
-            let userData: [String: Any] = ["fullname": fullname, "email": email ,"password": password]
-            self.db.collection("users").document(user.uid).setData(userData) { error in
+            self.accountService.addAccount { account, error in
                 if let error = error {
                     completion(.failure(error))
                     return
                 }
-                user.sendEmailVerification { error in
-                    if let error = error {
-                        completion(.failure(error))
-                        return
-                    }
+                if let account = account {
+                    let userData: [String: Any] = ["id": user.uid, "fullname": fullname, "email": email ,"password": password ,"accountId": account.id , "cards":[]]
+                    self.db.collection("users").document(user.uid).setData(userData) { error in
+                        if let error = error {
+                            completion(.failure(error))
+                            return
+                        }
+                        user.sendEmailVerification { error in
+                            if let error = error {
+                                completion(.failure(error))
+                                return
+                            }
+                        }
+                        completion(.success(true))
+                    
                 }
-                completion(.success(true))
+                
+                
+            }
+     
             }
         }
     }

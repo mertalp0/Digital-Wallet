@@ -8,5 +8,6 @@
 import Foundation
 
 protocol AccountServiceProtocol {
+    func addAccount(completion: @escaping (Account?, Error?) -> Void)
     func fetchAccount(accountId: String , completion: @escaping (Account?, Error?) -> Void)
 }

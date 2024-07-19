@@ -43,7 +43,9 @@ class LoginViewModel: ObservableObject {
         
 
     func login(completion: @escaping (Result<UserModel, Error>) -> Void) {
+        print("user.fullName")
         
+
         let validationResult = Validator.loginValid(email: email, password: password)
                
         guard validationResult.isValid else {
@@ -54,17 +56,19 @@ class LoginViewModel: ObservableObject {
         }
 
         isLoading = true
-        AuthenticationService.shared.login(email: email, password: password) { result in
+        AuthenticationService.shared.login(email: email, password: password) {
+            result in
             DispatchQueue.main.async {
                 self.isLoading = false
                 
                 switch result {
                 case .success(let user):
-                    // Handle successful login
+                    print(user.accountId)
                     completion(.success(user))
                     
                 case .failure(let error):
                     // Handle login error
+                    print(error)
                     self.alertMessage = error.localizedDescription
                     self.showAlert = true
                     completion(.failure(error))

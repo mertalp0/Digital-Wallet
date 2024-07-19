@@ -16,16 +16,20 @@ struct LoginView: View {
             CustomTextField(placeholder: "Password", text: $viewModel.password)
             CustomButton(title: "Login", size: .large) {
                 viewModel.login { result in
-                 
-                    
+                    switch result {
+                    case .success:
+                        viewModel.goToHome()
+                    case .failure(let error):
+                        //TODO: DELETE
+                        viewModel.goToHome()
+                        print("Login failed with error: \(error.localizedDescription)")
+                    }
                 }
             }
             Button("go to Register") {
                  viewModel.goToRegister()
             }
-            Button("go to Home") {
-                viewModel.goToHome()
-            }
+            
         }
         .alert(isPresented: $viewModel.showAlert) {
             Alert(title: Text(viewModel.alertMessage))

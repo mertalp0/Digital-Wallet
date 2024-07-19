@@ -18,7 +18,7 @@ struct HomeView: View {
             }
             .edgesIgnoringSafeArea(.all)
 
-            if let user = viewModel.user ,  let  account=viewModel.account {
+            if let user = viewModel.user ,  let account=viewModel.account {
                 VStack(alignment:.center,spacing: 20){
                     HStack(){
                         VStack(alignment:.leading){

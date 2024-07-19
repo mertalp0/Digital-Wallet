@@ -26,7 +26,7 @@ class UserService: UserServiceProtocol {
         }
         
         //TODO: id will change
-        db.collection("users").document("gUh3YyDJmfcAciNb8Skmdu6lqsE3").getDocument { snapshot, error in
+        db.collection("users").document(userId).getDocument { snapshot, error in
             if let error = error {
                 completion(nil, error)
                 return

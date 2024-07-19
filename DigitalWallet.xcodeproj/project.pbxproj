@@ -17,6 +17,7 @@
 		94899F2C2C4940C400CB103C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94899F2B2C4940C400CB103C /* UserService.swift */; };
 		948D7A4E2C4A3CAD00806D3F /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948D7A4D2C4A3CAD00806D3F /* UserServiceProtocol.swift */; };
 		948D7A502C4A3CC500806D3F /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948D7A4F2C4A3CC500806D3F /* AccountServiceProtocol.swift */; };
+		948D7A542C4A6C2600806D3F /* GenerateIBAN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948D7A532C4A6C2600806D3F /* GenerateIBAN.swift */; };
 		9492EE862C3FA5BF00FA0947 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE852C3FA5BF00FA0947 /* CardModel.swift */; };
 		9492EE882C3FA5D400FA0947 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE872C3FA5D400FA0947 /* LoginCoordinator.swift */; };
 		9492EE8A2C3FA5E900FA0947 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE892C3FA5E900FA0947 /* Constant.swift */; };
@@ -27,13 +28,11 @@
 		9492EE992C3FACC000FA0947 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9492EE982C3FACC000FA0947 /* FirebaseFirestore */; };
 		9492EE9B2C3FACC100FA0947 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9492EE9A2C3FACC100FA0947 /* FirebaseStorage */; };
 		9492EE9D2C3FAD0100FA0947 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9492EE9C2C3FAD0100FA0947 /* GoogleService-Info.plist */; };
-		9492EEA02C3FB49A00FA0947 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE9F2C3FB49A00FA0947 /* SplashCoordinator.swift */; };
 		94A1C3BB2C3EB1A40018D02F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3BA2C3EB1A40018D02F /* AppDelegate.swift */; };
 		94A1C3BF2C3EB1A60018D02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */; };
 		94A1C3CC2C3EB1A60018D02F /* DigitalWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3CB2C3EB1A60018D02F /* DigitalWalletTests.swift */; };
 		94A1C3D62C3EB1A60018D02F /* DigitalWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3D52C3EB1A60018D02F /* DigitalWalletUITests.swift */; };
 		94A1C3D82C3EB1A60018D02F /* DigitalWalletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3D72C3EB1A60018D02F /* DigitalWalletUITestsLaunchTests.swift */; };
-		94A1C3EF2C3EBD180018D02F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3EE2C3EBD180018D02F /* SplashView.swift */; };
 		94A1C3F12C3EBFE00018D02F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3F02C3EBFE00018D02F /* RegisterView.swift */; };
 		94A1C3F32C3EBFEC0018D02F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3F22C3EBFEC0018D02F /* LoginView.swift */; };
 		94A1C3F62C3EC0160018D02F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A1C3F52C3EC0160018D02F /* LoginViewModel.swift */; };
@@ -80,12 +79,12 @@
 		94899F2B2C4940C400CB103C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		948D7A4D2C4A3CAD00806D3F /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
 		948D7A4F2C4A3CC500806D3F /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
+		948D7A532C4A6C2600806D3F /* GenerateIBAN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateIBAN.swift; sourceTree = "<group>"; };
 		9492EE852C3FA5BF00FA0947 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		9492EE872C3FA5D400FA0947 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		9492EE892C3FA5E900FA0947 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		9492EE8B2C3FA63100FA0947 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		9492EE9C2C3FAD0100FA0947 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9492EE9F2C3FB49A00FA0947 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		94A1C3B72C3EB1A40018D02F /* DigitalWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A1C3BA2C3EB1A40018D02F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,7 +93,6 @@
 		94A1C3D12C3EB1A60018D02F /* DigitalWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitalWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A1C3D52C3EB1A60018D02F /* DigitalWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalWalletUITests.swift; sourceTree = "<group>"; };
 		94A1C3D72C3EB1A60018D02F /* DigitalWalletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalWalletUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		94A1C3EE2C3EBD180018D02F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		94A1C3F02C3EBFE00018D02F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		94A1C3F22C3EBFEC0018D02F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		94A1C3F52C3EC0160018D02F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 		94A1C3E72C3EBC670018D02F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				94A1C3EB2C3EBCD80018D02F /* Splash */,
 				94A1C3EA2C3EBCC30018D02F /* Register */,
 				94A1C3E92C3EBCBD0018D02F /* Login */,
 			);
@@ -272,15 +269,6 @@
 				94A1C3F02C3EBFE00018D02F /* RegisterView.swift */,
 			);
 			path = Register;
-			sourceTree = "<group>";
-		};
-		94A1C3EB2C3EBCD80018D02F /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-				94A1C3EE2C3EBD180018D02F /* SplashView.swift */,
-				9492EE9F2C3FB49A00FA0947 /* SplashCoordinator.swift */,
-			);
-			path = Splash;
 			sourceTree = "<group>";
 		};
 		94A1C3F42C3EBFFA0018D02F /* Authentication */ = {
@@ -334,6 +322,7 @@
 			children = (
 				9492EE8B2C3FA63100FA0947 /* Validator.swift */,
 				944398352C415D3F00D8453E /* ErrorMessages.swift */,
+				948D7A532C4A6C2600806D3F /* GenerateIBAN.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -530,7 +519,6 @@
 				944398342C41391500D8453E /* ButtonSize.swift in Sources */,
 				94B2298A2C486C7F00A8AE58 /* HomeViewModel.swift in Sources */,
 				9492EE882C3FA5D400FA0947 /* LoginCoordinator.swift in Sources */,
-				9492EEA02C3FB49A00FA0947 /* SplashCoordinator.swift in Sources */,
 				94B229872C486C3400A8AE58 /* HomeCoordinator.swift in Sources */,
 				94A1C3F12C3EBFE00018D02F /* RegisterView.swift in Sources */,
 				9492EE862C3FA5BF00FA0947 /* CardModel.swift in Sources */,
@@ -543,6 +531,7 @@
 				944398302C412C6900D8453E /* CustomTextField.swift in Sources */,
 				94899F2C2C4940C400CB103C /* UserService.swift in Sources */,
 				948D7A502C4A3CC500806D3F /* AccountServiceProtocol.swift in Sources */,
+				948D7A542C4A6C2600806D3F /* GenerateIBAN.swift in Sources */,
 				9450A16B2C3ED04D008949B3 /* CustomButton.swift in Sources */,
 				94A1C3BB2C3EB1A40018D02F /* AppDelegate.swift in Sources */,
 				9443982E2C412B6E00D8453E /* UserModel.swift in Sources */,
@@ -553,7 +542,6 @@
 				94B229902C49276D00A8AE58 /* ActivityCardType.swift in Sources */,
 				94C7F4A12C4A340500B91D92 /* AccountService .swift in Sources */,
 				94A1C3F62C3EC0160018D02F /* LoginViewModel.swift in Sources */,
-				94A1C3EF2C3EBD180018D02F /* SplashView.swift in Sources */,
 				94B229852C486C1E00A8AE58 /* HomeView.swift in Sources */,
 				94A1C3FD2C3EC0AF0018D02F /* AuhtenticationService.swift in Sources */,
 				94B2298E2C49264C00A8AE58 /* AccountInfo.swift in Sources */,
