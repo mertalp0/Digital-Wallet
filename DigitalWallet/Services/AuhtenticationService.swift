@@ -13,6 +13,7 @@ class AuthenticationService: AuthenticationServiceProtocol {
     static let shared = AuthenticationService()
     private let db = Firestore.firestore()
     
+    
     func login(email: String, password: String, completion: @escaping (Result<UserModel, Error>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error as NSError? {
@@ -28,7 +29,7 @@ class AuthenticationService: AuthenticationServiceProtocol {
 
             if user.isEmailVerified {
                 // TODO: Fetch data from Firebase with user.uid
-                let currentUser = UserModel(id: "", fullName: "", email: "", password: "")
+                let currentUser = UserModel(id: "", fullName: "", email: "", accountId: "", cards: [""])
                 completion(.success(currentUser))
                 
             } else {

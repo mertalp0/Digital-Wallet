@@ -11,12 +11,14 @@ class UserModel {
     var id: String
     var fullName: String
     var email: String
-    var password: String
+    var accountId : String
+    var cards : [String]
     
-    init(id: String, fullName: String, email: String, password: String) {
+    init(id: String, fullName: String, email: String , accountId : String , cards:[String]) {
         self.id = id
         self.fullName = fullName
         self.email = email
-        self.password = password
+        self.accountId = accountId
+        self.cards = cards
     }
 }
