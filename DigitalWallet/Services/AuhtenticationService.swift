@@ -13,7 +13,9 @@ class AuthenticationService: AuthenticationServiceProtocol {
     static let shared = AuthenticationService()
     private let db = Firestore.firestore()
     
-    
+    func getCurrentUser() -> User? {
+         return Auth.auth().currentUser
+     }
     func login(email: String, password: String, completion: @escaping (Result<UserModel, Error>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error as NSError? {

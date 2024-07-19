@@ -1,9 +1,4 @@
-//
-//  AppDelegate.swift
-//  ModularisationStarter
-//
-//  Created by Emre Havan on 13.02.24.
-//
+
 
 import UIKit
 import Firebase

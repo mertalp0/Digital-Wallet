@@ -18,11 +18,12 @@ struct HomeView: View {
             }
             .edgesIgnoringSafeArea(.all)
 
-            if let user = viewModel.user {
+            if let user = viewModel.user ,  let  account=viewModel.account {
                 VStack(alignment:.center,spacing: 20){
                     HStack(){
                         VStack(alignment:.leading){
-                            Text("$7,425")
+                            Text(account.balance)
+                            Text(account.iban)
                             Text("Available balance")
                             Text(user.fullName)
                         }

@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 
 protocol AuthenticationServiceProtocol {
+    func getCurrentUser() -> User?
+    
     func login(email: String,
                password: String,
                completion : @escaping(Result<UserModel,Error>)-> Void)
