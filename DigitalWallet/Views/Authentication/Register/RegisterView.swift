@@ -12,17 +12,18 @@ struct RegisterView: View {
     
     var body: some View {
         VStack{
-            CustomTextField(placeholder: "full name", text: $viewModel.fullname)
-            CustomTextField(placeholder: "email", text: $viewModel.email)
-            CustomTextField(placeholder: "password", text: $viewModel.password)
-            CustomTextField(placeholder: "confirm password", text: $viewModel.confirmPassword)
+            CustomTextField(placeholder: LocalizedStrings.Register.fullnamePlaceholder, text: $viewModel.fullname)
+            CustomTextField(placeholder: LocalizedStrings.Register.emailPlaceholder, text: $viewModel.email)
+            CustomTextField(placeholder: LocalizedStrings.Register.passwordPlaceholder, text: $viewModel.password)
+            CustomTextField(placeholder: LocalizedStrings.Register.confirmPasswordPlaceholder, text: $viewModel.confirmPassword)
             CustomCheckBox(isChecked: $viewModel.isChecked)
-            CustomButton(title: "Register", size: .large) {
+            CustomButton(title: LocalizedStrings.Register.registerButton, size: .large) {
                 viewModel.register { result in
+                    // Handle registration result
                 }
             }
-          
-        }.alert(isPresented: $viewModel.showAlert, content: {
+        }
+        .alert(isPresented: $viewModel.showAlert, content: {
             Alert(title: Text(viewModel.alertMessage))
         })
     }

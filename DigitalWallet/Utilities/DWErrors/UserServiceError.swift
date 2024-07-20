@@ -12,7 +12,7 @@ class UserServiceError: BaseError {
         case userNotAuthenticated
         case userDocumentNotFound
         case userDataCorrupted
-        case firebaseError(Error) // Firebase hatalarını buraya ekledik
+        case firebaseError(Error) 
     }
     
     private let type: ErrorType

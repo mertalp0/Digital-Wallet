@@ -4,6 +4,12 @@
 //
 //  Created by mert alp on 10.07.2024.
 //
+//
+//  LoginView.swift
+//  DigitalWallet
+//
+//  Created by mert alp on 10.07.2024.
+//
 
 import SwiftUI
 
@@ -12,9 +18,9 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
-            CustomTextField(placeholder: "Email", text: $viewModel.email)
-            CustomTextField(placeholder: "Password", text: $viewModel.password)
-            CustomButton(title: "Login", size: .large) {
+            CustomTextField(placeholder: LocalizedStrings.Login.emailPlaceholder, text: $viewModel.email)
+            CustomTextField(placeholder: LocalizedStrings.Login.passwordPlaceholder, text: $viewModel.password)
+            CustomButton(title: LocalizedStrings.Login.loginButton, size: .large) {
                 viewModel.login { result in
                     switch result {
                     case .success:
@@ -24,13 +30,12 @@ struct LoginView: View {
                     }
                 }
             }
-            Button("go to Register") {
-                 viewModel.goToRegister()
+            Button(LocalizedStrings.Login.goToRegisterButton) {
+                viewModel.goToRegister()
             }
-            
         }
         .alert(isPresented: $viewModel.showAlert) {
-            Alert(title: Text(viewModel.alertMessage))
+            Alert(title: Text(LocalizedStrings.Login.alertTitle))
         }
         .padding()
     }

@@ -46,13 +46,15 @@
 		94A278CB2C4C150600DD8CF8 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A278CA2C4C150600DD8CF8 /* AuthenticationError.swift */; };
 		94A278CD2C4C153000DD8CF8 /* UserServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A278CC2C4C153000DD8CF8 /* UserServiceError.swift */; };
 		94A278CF2C4C1A0C00DD8CF8 /* AccountServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A278CE2C4C1A0C00DD8CF8 /* AccountServiceError.swift */; };
+		94A278D22C4C3D8000DD8CF8 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A278D12C4C3D8000DD8CF8 /* LocalizedStrings.swift */; };
+		94A278D52C4C3E0400DD8CF8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94A278D32C4C3E0400DD8CF8 /* Localizable.strings */; };
 		94B229622C47215000A8AE58 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229612C47215000A8AE58 /* RegisterCoordinator.swift */; };
 		94B229642C47C6EC00A8AE58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */; };
 		94B229852C486C1E00A8AE58 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229842C486C1E00A8AE58 /* HomeView.swift */; };
 		94B229872C486C3400A8AE58 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229862C486C3400A8AE58 /* HomeCoordinator.swift */; };
 		94B2298A2C486C7F00A8AE58 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229892C486C7F00A8AE58 /* HomeViewModel.swift */; };
 		94B2298C2C491E4C00A8AE58 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2298B2C491E4C00A8AE58 /* ActivityCard.swift */; };
-		94B2298E2C49264C00A8AE58 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2298D2C49264C00A8AE58 /* AccountInfo.swift */; };
+		94B2298E2C49264C00A8AE58 /* ExpenseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2298D2C49264C00A8AE58 /* ExpenseCard.swift */; };
 		94B229902C49276D00A8AE58 /* ActivityCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2298F2C49276D00A8AE58 /* ActivityCardType.swift */; };
 		94C7F4A12C4A340500B91D92 /* AccountService .swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C7F4A02C4A340500B91D92 /* AccountService .swift */; };
 		94C7F4A32C4A359B00B91D92 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C7F4A22C4A359B00B91D92 /* AccountModel.swift */; };
@@ -111,6 +113,8 @@
 		94A278CA2C4C150600DD8CF8 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		94A278CC2C4C153000DD8CF8 /* UserServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceError.swift; sourceTree = "<group>"; };
 		94A278CE2C4C1A0C00DD8CF8 /* AccountServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceError.swift; sourceTree = "<group>"; };
+		94A278D12C4C3D8000DD8CF8 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		94A278D42C4C3E0400DD8CF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		94B229612C47215000A8AE58 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		94B2297B2C47F98800A8AE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -118,7 +122,7 @@
 		94B229862C486C3400A8AE58 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		94B229892C486C7F00A8AE58 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		94B2298B2C491E4C00A8AE58 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
-		94B2298D2C49264C00A8AE58 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
+		94B2298D2C49264C00A8AE58 /* ExpenseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCard.swift; sourceTree = "<group>"; };
 		94B2298F2C49276D00A8AE58 /* ActivityCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardType.swift; sourceTree = "<group>"; };
 		94C7F4A02C4A340500B91D92 /* AccountService .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountService .swift"; sourceTree = "<group>"; };
 		94C7F4A22C4A359B00B91D92 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -318,7 +322,8 @@
 		94A1C4022C3EC19F0018D02F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				94A278C72C4C14D200DD8CF8 /* Errors */,
+				94A278D02C4C3D0800DD8CF8 /* Strings */,
+				94A278C72C4C14D200DD8CF8 /* DWErrors */,
 				94A1C4042C3EC1BC0018D02F /* Helpers */,
 				94A1C4032C3EC1AE0018D02F /* Constants */,
 			);
@@ -372,7 +377,7 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		94A278C72C4C14D200DD8CF8 /* Errors */ = {
+		94A278C72C4C14D200DD8CF8 /* DWErrors */ = {
 			isa = PBXGroup;
 			children = (
 				94A278C82C4C14E000DD8CF8 /* BaseError.swift */,
@@ -380,14 +385,23 @@
 				94A278CC2C4C153000DD8CF8 /* UserServiceError.swift */,
 				94A278CE2C4C1A0C00DD8CF8 /* AccountServiceError.swift */,
 			);
-			path = Errors;
+			path = DWErrors;
+			sourceTree = "<group>";
+		};
+		94A278D02C4C3D0800DD8CF8 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				94A278D12C4C3D8000DD8CF8 /* LocalizedStrings.swift */,
+				94A278D32C4C3E0400DD8CF8 /* Localizable.strings */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		94B229832C486C1200A8AE58 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				94B229842C486C1E00A8AE58 /* HomeView.swift */,
-				94B2298D2C49264C00A8AE58 /* AccountInfo.swift */,
+				94B2298D2C49264C00A8AE58 /* ExpenseCard.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -518,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A1C3BF2C3EB1A60018D02F /* Assets.xcassets in Resources */,
+				94A278D52C4C3E0400DD8CF8 /* Localizable.strings in Resources */,
 				9492EE9D2C3FAD0100FA0947 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,9 +592,10 @@
 				94B229902C49276D00A8AE58 /* ActivityCardType.swift in Sources */,
 				94C7F4A12C4A340500B91D92 /* AccountService .swift in Sources */,
 				94A1C3F62C3EC0160018D02F /* LoginViewModel.swift in Sources */,
+				94A278D22C4C3D8000DD8CF8 /* LocalizedStrings.swift in Sources */,
 				94B229852C486C1E00A8AE58 /* HomeView.swift in Sources */,
 				94A1C3FD2C3EC0AF0018D02F /* AuhtenticationService.swift in Sources */,
-				94B2298E2C49264C00A8AE58 /* AccountInfo.swift in Sources */,
+				94B2298E2C49264C00A8AE58 /* ExpenseCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +630,17 @@
 			targetProxy = 94A1C3D22C3EB1A60018D02F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		94A278D32C4C3E0400DD8CF8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94A278D42C4C3E0400DD8CF8 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		94A1C3D92C3EB1A60018D02F /* Debug */ = {

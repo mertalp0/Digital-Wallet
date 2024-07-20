@@ -1,5 +1,5 @@
 //
-//  AccountInfo.swift
+//  ExpenseCard.swift
 //  DigitalWallet
 //
 //  Created by mert alp on 18.07.2024.
@@ -17,7 +17,7 @@ struct ExpenseCard: View {
         VStack(alignment: .leading) {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Spent")
+                    Text(LocalizedStrings.Home.spentTitle)
                         .font(.subheadline)
                         .foregroundColor(.gray)
                     HStack {
@@ -31,7 +31,7 @@ struct ExpenseCard: View {
                 }
                 Spacer()
                 VStack(alignment: .leading) {
-                    Text("Earned")
+                    Text(LocalizedStrings.Home.earnedTitle)
                         .font(.subheadline)
                         .foregroundColor(.gray)
                     HStack {
@@ -48,7 +48,7 @@ struct ExpenseCard: View {
             
             Divider()
             
-            VStack(alignment: .leading){
+            VStack(alignment: .leading) {
                 Text(spentDescription)
                     .font(.body)
                     .foregroundColor(.gray)
@@ -56,13 +56,13 @@ struct ExpenseCard: View {
                 
                 Spacer()
                 
-                Text(moreInfoLink)
+                Text(LocalizedStrings.Home.moreInfoLink)
                     .font(.body)
                     .foregroundColor(Color(hex: "#5AA5E2"))
                     .padding([.bottom, .horizontal])
             }
         }
-        .frame(width: Constant.width*0.8, height: 200)
+        .frame(width: Constant.width * 0.8, height: 200)
         .background(Color.white)
         .cornerRadius(15)
         .shadow(radius: 5)

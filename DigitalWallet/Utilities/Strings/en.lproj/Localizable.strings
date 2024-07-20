@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  DigitalWallet
+
+  Created by mert alp on 20.07.2024.
+  
+*/
+
+// LoginView
+"login_email_placeholder" = "Email";
+"login_password_placeholder" = "Password";
+"login_button" = "Login";
+"login_go_to_register_button" = "Go to Register";
+"login_alert_title" = "Login Failed";
+
+// RegisterView
+"register_fullname_placeholder" = "Full Name";
+"register_email_placeholder" = "Email";
+"register_password_placeholder" = "Password";
+"register_confirm_password_placeholder" = "Confirm Password";
+"register_button" = "Register";
+
+// HomeView
+"home_available_balance" = "Available balance";
+"home_spent_description" = "You spent $%@ this month";
+"home_activity_title" = "Activity";
+"expense_card_spent_title" = "Spent";
+"expense_card_earned_title" = "Earned";
+"expense_card_more_info_link" = "Tell me more";
+
