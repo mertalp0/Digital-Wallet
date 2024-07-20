@@ -20,17 +20,17 @@ struct ActivityCard: View {
                 .padding(15)
                 .foregroundColor(.white)
             //TODO: MUST BE IN COLOR THEME
-                .background(Color.blue)
+                .background(Color(hex: "#5AA5E2"))
                 .cornerRadius(10)
             Text(type.title)
                 .font(.headline)
                 .multilineTextAlignment(.center)
                 .padding(.top, 5)
         }
-        .frame(width: Constant.width/4, height: Constant.width/4)
+        .frame(width: Constant.width/4, height: Constant.width/3)
         .background(Color.white)
         .cornerRadius(15)
-        .shadow(radius: 1)
+        .shadow(radius: 0.5)
         .padding()
     }
 }

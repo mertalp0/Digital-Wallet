@@ -21,8 +21,6 @@ class RegisterViewModel: ObservableObject {
 
     
     func register(completion: @escaping (Result<Bool, Error>) -> Void) {
-        // Validate inputs before registration
-        
         let validationResult = Validator.registerValid(fullname: fullname, email: email, password: password, confirmPassword: confirmPassword)
                
                guard validationResult.isValid else {

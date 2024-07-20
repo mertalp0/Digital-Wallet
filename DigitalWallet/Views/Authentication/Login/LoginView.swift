@@ -20,8 +20,6 @@ struct LoginView: View {
                     case .success:
                         viewModel.goToHome()
                     case .failure(let error):
-                        //TODO: DELETE
-                        viewModel.goToHome()
                         print("Login failed with error: \(error.localizedDescription)")
                     }
                 }

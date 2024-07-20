@@ -31,10 +31,11 @@ class AccountService: AccountServiceProtocol {
                                   let accountInfo = Account(id: id, iban: iban, balance: balance, earned: earned, spent: spent, transfers: transfers)
                                   completion(accountInfo, nil)
                 } else {
-                    completion(nil, NSError(domain: "BankService", code: -1, userInfo: [NSLocalizedDescriptionKey: "Account data is corrupted"]))
+                    completion(nil,AccountServiceError.dataCorrupted)
+            
                 }
             } else {
-                completion(nil, NSError(domain: "BankService", code: -1, userInfo: [NSLocalizedDescriptionKey: "Account document does not exist"]))
+                completion(nil,AccountServiceError.documentNotFound)
             }
         }
     }

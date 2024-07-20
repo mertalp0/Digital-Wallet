@@ -24,6 +24,7 @@ class HomeViewModel: ObservableObject {
     private func fetchUser() {
         userService.fetchUser { [weak self] user, error in
             if let error = error {
+            
                 print("Error fetching user: \(error.localizedDescription)")
             } else {
                 self?.fetchAccountInfo(accountId: user!.accountId)
@@ -38,6 +39,7 @@ class HomeViewModel: ObservableObject {
     private func fetchAccountInfo(accountId:String) {
         accountService.fetchAccount(accountId: accountId) { [weak self] account, error in
             if let error = error {
+                
                 print("Error fetching user: \(error.localizedDescription)")
             } else {
                 DispatchQueue.main.async {

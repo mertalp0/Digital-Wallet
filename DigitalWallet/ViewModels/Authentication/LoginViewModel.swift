@@ -12,7 +12,6 @@ import SwiftUI
 class LoginViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
-    @Published var isLoading: Bool = false
     @Published var alertMessage: String = ""
     @Published var showAlert: Bool = false
     
@@ -43,7 +42,7 @@ class LoginViewModel: ObservableObject {
         
 
     func login(completion: @escaping (Result<UserModel, Error>) -> Void) {
-        print("user.fullName")
+   
         
 
         let validationResult = Validator.loginValid(email: email, password: password)
@@ -55,11 +54,10 @@ class LoginViewModel: ObservableObject {
             return
         }
 
-        isLoading = true
+    
         AuthenticationService.shared.login(email: email, password: password) {
             result in
             DispatchQueue.main.async {
-                self.isLoading = false
                 
                 switch result {
                 case .success(let user):
@@ -67,7 +65,7 @@ class LoginViewModel: ObservableObject {
                     completion(.success(user))
                     
                 case .failure(let error):
-                    // Handle login error
+                  
                     print(error)
                     self.alertMessage = error.localizedDescription
                     self.showAlert = true

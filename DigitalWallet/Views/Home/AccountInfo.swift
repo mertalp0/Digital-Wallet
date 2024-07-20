@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ExpenseCard: View {
-    var spentAmount: Double
-    var earnedAmount: Double
+    var spentAmount: String
+    var earnedAmount: String
     var spentDescription: String
     var moreInfoLink: String
     
     var body: some View {
-        VStack(alignment: .center) {
+        VStack(alignment: .leading) {
             HStack {
                 VStack(alignment: .leading) {
                     Text("Spent")
@@ -24,7 +24,7 @@ struct ExpenseCard: View {
                         Circle()
                             .fill(Color.red)
                             .frame(width: 10, height: 10)
-                        Text("$\(Int(spentAmount))")
+                        Text("$\(spentAmount)")
                             .font(.title)
                             .bold()
                     }
@@ -36,9 +36,9 @@ struct ExpenseCard: View {
                         .foregroundColor(.gray)
                     HStack {
                         Circle()
-                            .fill(Color.blue)
+                            .fill(Color(hex: "#5AA5E2"))
                             .frame(width: 10, height: 10)
-                        Text("$\(Int(earnedAmount))")
+                        Text("$\(earnedAmount)")
                             .font(.title)
                             .bold()
                     }
@@ -48,17 +48,19 @@ struct ExpenseCard: View {
             
             Divider()
             
-            Text(spentDescription)
-                .font(.body)
-                .foregroundColor(.gray)
-                .padding(.horizontal)
-            
-            Spacer()
-            
-            Text(moreInfoLink)
-                .font(.body)
-                .foregroundColor(.blue)
-                .padding([.bottom, .horizontal])
+            VStack(alignment: .leading){
+                Text(spentDescription)
+                    .font(.body)
+                    .foregroundColor(.gray)
+                    .padding(.horizontal)
+                
+                Spacer()
+                
+                Text(moreInfoLink)
+                    .font(.body)
+                    .foregroundColor(Color(hex: "#5AA5E2"))
+                    .padding([.bottom, .horizontal])
+            }
         }
         .frame(width: Constant.width*0.8, height: 200)
         .background(Color.white)
