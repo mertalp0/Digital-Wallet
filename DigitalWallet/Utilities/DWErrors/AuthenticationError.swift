@@ -4,9 +4,6 @@
 //
 //  Created by mert alp on 20.07.2024.
 //
-
-import Foundation
-
 class AuthenticationServiceError: BaseError {
     enum ErrorType {
         // Firebase Error Types
@@ -24,29 +21,30 @@ class AuthenticationServiceError: BaseError {
     }
     
     init(type: ErrorType) {
-        super.init(type: .custom(AuthenticationServiceError.errorDescription(for: type)))
+        let description = AuthenticationServiceError.errorDescription(for: type)
+        super.init(type: .custom(description))
     }
     
     private static func errorDescription(for type: ErrorType) -> String {
         switch type {
         case .firebaseError(let error):
-            return "Firebase error: \(error.localizedDescription)"
+            return String(format: LocalizedStrings.AuthenticationError.firebaseError, error.localizedDescription)
         case .firebaseDocumentNotFound:
-            return "Firebase document not found."
+            return LocalizedStrings.AuthenticationError.firebaseDocumentNotFound
         case .firebaseDataCorrupted:
-            return "Firebase data is corrupted."
+            return LocalizedStrings.AuthenticationError.firebaseDataCorrupted
         case .userNotAuthenticated:
-            return "User is not authenticated."
+            return LocalizedStrings.AuthenticationError.userNotAuthenticated
         case .userNotFound:
-            return "User not found."
+            return LocalizedStrings.AuthenticationError.userNotFound
         case .emailNotVerified:
-            return "Email address not verified."
+            return LocalizedStrings.AuthenticationError.emailNotVerified
         case .userNotCreated:
-            return "User was not created successfully."
+            return LocalizedStrings.AuthenticationError.userNotCreated
         case .accountCreationFailed:
-            return "Account creation failed."
+            return LocalizedStrings.AuthenticationError.accountCreationFailed
         case .encryptionFailed:
-            return "Password encryption failed."
+            return LocalizedStrings.AuthenticationError.encryptionFailed
         }
     }
 }

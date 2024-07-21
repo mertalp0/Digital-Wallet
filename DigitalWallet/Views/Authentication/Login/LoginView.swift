@@ -4,13 +4,6 @@
 //
 //  Created by mert alp on 10.07.2024.
 //
-//
-//  LoginView.swift
-//  DigitalWallet
-//
-//  Created by mert alp on 10.07.2024.
-//
-
 import SwiftUI
 
 struct LoginView: View {
@@ -18,9 +11,29 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
+            Spacer()
+            Text(LocalizedStrings.Login.welcomeBack)
+                .font(.largeTitle)
+                .foregroundColor(DWColors.text)
+            Text(LocalizedStrings.Login.signInToContinue)
+                .font(.subheadline)
+                .foregroundColor(DWColors.text.opacity(0.5))
+                .padding()
+            Spacer().frame(height: 50)
             CustomTextField(placeholder: LocalizedStrings.Login.emailPlaceholder, text: $viewModel.email)
             CustomTextField(placeholder: LocalizedStrings.Login.passwordPlaceholder, text: $viewModel.password)
-            CustomButton(title: LocalizedStrings.Login.loginButton, size: .large) {
+            HStack {
+                Spacer()
+                Button(LocalizedStrings.Login.forgotPassword) {
+                 
+                }
+                .foregroundColor(DWColors.text.opacity(0.5))
+                .font(.footnote)
+                .padding(.trailing, 25)
+            }
+            Spacer().frame(height: 20)
+            
+            CustomButton(title: LocalizedStrings.Login.signInButton, size: .large) {
                 viewModel.login { result in
                     switch result {
                     case .success:
@@ -30,14 +43,22 @@ struct LoginView: View {
                     }
                 }
             }
-            Button(LocalizedStrings.Login.goToRegisterButton) {
-                viewModel.goToRegister()
+            Spacer()
+            HStack {
+                Text(LocalizedStrings.Login.dontHaveAccount)
+                    .foregroundColor(DWColors.text.opacity(0.5))
+                Button(LocalizedStrings.Login.signUp) {
+                    viewModel.goToRegister()
+                }
+                .foregroundColor(DWColors.primary)
             }
+            Spacer()
         }
         .alert(isPresented: $viewModel.showAlert) {
-            Alert(title: Text(LocalizedStrings.Login.alertTitle))
+            Alert(title: Text(viewModel.alertMessage))
         }
-        .padding()
+        .background(DWColors.background)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

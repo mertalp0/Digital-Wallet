@@ -9,23 +9,56 @@ import SwiftUI
 
 struct RegisterView: View {
     @ObservedObject var viewModel: RegisterViewModel
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
-        VStack{
-            CustomTextField(placeholder: LocalizedStrings.Register.fullnamePlaceholder, text: $viewModel.fullname)
-            CustomTextField(placeholder: LocalizedStrings.Register.emailPlaceholder, text: $viewModel.email)
+        VStack {
+            Spacer()
+            Text(LocalizedStrings.Register.welcome)
+                .font(.largeTitle)
+                .foregroundColor(DWColors.text)
+            Text(LocalizedStrings.Register.provideDetails)
+                .font(.subheadline)
+                .foregroundColor(DWColors.text.opacity(0.7))
+                .multilineTextAlignment(.center)
+                .frame(width: 250, alignment: .center)
+                .padding()
+            Spacer().frame(height: 50)
+            CustomTextField(placeholder: LocalizedStrings.Register.fullNamePlaceholder, text: $viewModel.fullname)
+            CustomTextField(placeholder: LocalizedStrings.Register.emailAddressPlaceholder, text: $viewModel.email)
             CustomTextField(placeholder: LocalizedStrings.Register.passwordPlaceholder, text: $viewModel.password)
             CustomTextField(placeholder: LocalizedStrings.Register.confirmPasswordPlaceholder, text: $viewModel.confirmPassword)
-            CustomCheckBox(isChecked: $viewModel.isChecked)
-            CustomButton(title: LocalizedStrings.Register.registerButton, size: .large) {
+            HStack {
+                CheckBoxView(isChecked: $viewModel.isChecked)
+                Text(LocalizedStrings.Register.termsConditions)
+                    .font(.subheadline)
+                    .foregroundColor(DWColors.text.opacity(0.7))
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 10)
+            Spacer().frame(height: 20)
+            CustomButton(title: LocalizedStrings.Register.signUpButton, size: .large) {
                 viewModel.register { result in
-                    // Handle registration result
+                    // Handle register result
                 }
             }
+            Spacer()
+            HStack {
+                Text(LocalizedStrings.Register.alreadyHaveAccount)
+                    .foregroundColor(DWColors.text.opacity(0.7))
+                Button(LocalizedStrings.Register.signIn) {
+                //    viewModel.goToLogin()
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+                .foregroundColor(DWColors.primary)
+            }
+            Spacer()
         }
-        .alert(isPresented: $viewModel.showAlert, content: {
+        .alert(isPresented: $viewModel.showAlert) {
             Alert(title: Text(viewModel.alertMessage))
-        })
+        }
+        .background(DWColors.background)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

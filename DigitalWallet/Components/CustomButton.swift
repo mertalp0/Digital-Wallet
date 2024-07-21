@@ -7,7 +7,7 @@
 import SwiftUI
 struct CustomButton : View {
     var title: String
-    var color: Color? = .blue
+    var color: Color? = DWColors.primary
     var size: ButtonSize 
     var action: () -> Void
     
@@ -24,13 +24,12 @@ struct CustomButton : View {
         }
     }
 }
-//TODO: 
 struct CustomButtonStyle: ButtonStyle {
     var color: Color
     var size: ButtonSize
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .frame(width: size.size.width, height: size.size.height) // Use enum size
+            .frame(width: size.size.width, height: size.size.height) 
             .padding()
             .background(configuration.isPressed ? color.opacity(0.7) : color)
             .foregroundColor(.white)

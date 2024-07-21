@@ -5,14 +5,12 @@
 //  Created by mert alp on 20.07.2024.
 //
 
-import Foundation
-
 class UserServiceError: BaseError {
     enum ErrorType {
         case userNotAuthenticated
         case userDocumentNotFound
         case userDataCorrupted
-        case firebaseError(Error) 
+        case firebaseError(Error)
     }
     
     private let type: ErrorType
@@ -25,13 +23,13 @@ class UserServiceError: BaseError {
     private static func errorDescription(for type: ErrorType) -> String {
         switch type {
         case .userNotAuthenticated:
-            return "User is not authenticated."
+            return LocalizedStrings.UserError.userNotAuthenticated
         case .userDocumentNotFound:
-            return "User document does not exist."
+            return LocalizedStrings.UserError.userDocumentNotFound
         case .userDataCorrupted:
-            return "User data is corrupted."
+            return LocalizedStrings.UserError.userDataCorrupted
         case .firebaseError(let error):
-            return "Firebase error: \(error.localizedDescription)"
+            return String(format: LocalizedStrings.UserError.firebaseError, error.localizedDescription)
         }
     }
 }

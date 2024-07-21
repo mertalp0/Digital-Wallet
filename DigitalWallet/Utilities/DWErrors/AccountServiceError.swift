@@ -14,11 +14,11 @@ enum AccountServiceError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .documentNotFound:
-            return "Account document does not exist."
+            return LocalizedStrings.AccountError.documentNotFound
         case .dataCorrupted:
-            return "Account data is corrupted."
+            return LocalizedStrings.AccountError.dataCorrupted
         case .firebaseError(let error):
-            return "Firebase error: \(error.localizedDescription)"
+            return String(format: LocalizedStrings.AccountError.firebaseError, error.localizedDescription)
         }
     }
 }

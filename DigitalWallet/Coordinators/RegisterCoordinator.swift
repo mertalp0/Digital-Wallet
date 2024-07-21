@@ -17,7 +17,8 @@ class RegisterCoordinator: ObservableObject {
     func makeViewController() -> UIViewController {
         let view = RegisterView(
             viewModel: RegisterViewModel())
-        let hostingVC = UIHostingController(rootView: view)
+        let hostingVC = UIHostingController(rootView: view.navigationBarBackButtonHidden(true))
         return hostingVC
     }
+    
 }
