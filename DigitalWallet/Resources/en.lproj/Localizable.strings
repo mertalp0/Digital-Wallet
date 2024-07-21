@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  DigitalWallet
+
+  Created by mert alp on 20.07.2024.
+  
+*/
+/* LoginView */
+"login_welcome_back" = "Welcome Back!";
+"login_sign_in_to_continue" = "Sign in to continue";
+"login_email_placeholder" = "Email";
+"login_password_placeholder" = "Password";
+"login_forgot_password" = "Forgot Password?";
+"login_sign_in_button" = "Sign in My Account";
+"login_dont_have_account" = "Don't have an account?";
+"login_sign_up" = "Sign Up";
+
+/* RegisterView */
+"register_welcome" = "Welcome!";
+"register_provide_details" = "Please provide the following details for your new account";
+"register_full_name_placeholder" = "Full Name";
+"register_email_address_placeholder" = "Email Address";
+"register_password_placeholder" = "Password";
+"register_confirm_password_placeholder" = "Confirm Password";
+"register_terms_conditions" = "By creating your account, you agree to our Terms and Conditions.";
+"register_sign_up_button" = "Sign up my Account";
+"register_already_have_account" = "Already have an account?";
+"register_sign_in" = "Sign In";
+
+/* HomeView */
+"home_available_balance" = "Available balance";
+"home_spent_description" = "You spent %@ this month";
+"home_activity_title" = "Activity";
+"expense_card_spent_title" = "Spent";
+"expense_card_earned_title" = "Earned";
+"expense_card_more_info_link" = "Tell me more";
+
+/* Authentication Service Errors */
+"auth_firebase_error" = "Firebase error: %@";
+"auth_firebase_document_not_found" = "Firebase document not found.";
+"auth_firebase_data_corrupted" = "Firebase data is corrupted.";
+"auth_user_not_authenticated" = "User is not authenticated.";
+"auth_user_not_found" = "User not found.";
+"auth_email_not_verified" = "Email address not verified.";
+"auth_user_not_created" = "User was not created successfully.";
+"auth_account_creation_failed" = "Account creation failed.";
+"auth_encryption_failed" = "Password encryption failed.";
+
+/* User Service Errors */
+"user_error_not_authenticated" = "User is not authenticated.";
+"user_error_document_not_found" = "User document does not exist.";
+"user_error_data_corrupted" = "User data is corrupted.";
+"user_error_firebase_error" = "Firebase error: %@";
+
+/* Account Service Errors */
+"account_error_document_not_found" = "Account document does not exist.";
+"account_error_data_corrupted" = "Account data is corrupted.";
+"account_error_firebase_error" = "Firebase error: %@";
