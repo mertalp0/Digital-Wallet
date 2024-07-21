@@ -24,6 +24,7 @@ struct CustomButton : View {
         }
     }
 }
+
 struct CustomButtonStyle: ButtonStyle {
     var color: Color
     var size: ButtonSize

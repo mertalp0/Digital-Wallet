@@ -26,8 +26,8 @@ struct RegisterView: View {
             Spacer().frame(height: 50)
             CustomTextField(placeholder: LocalizedStrings.Register.fullNamePlaceholder, text: $viewModel.fullname)
             CustomTextField(placeholder: LocalizedStrings.Register.emailAddressPlaceholder, text: $viewModel.email)
-            CustomTextField(placeholder: LocalizedStrings.Register.passwordPlaceholder, text: $viewModel.password)
-            CustomTextField(placeholder: LocalizedStrings.Register.confirmPasswordPlaceholder, text: $viewModel.confirmPassword)
+            CustomTextField(placeholder: LocalizedStrings.Register.passwordPlaceholder,textFieldType: .password, text: $viewModel.password)
+            CustomTextField(placeholder: LocalizedStrings.Register.confirmPasswordPlaceholder, textFieldType: .password,text: $viewModel.confirmPassword)
             HStack {
                 CheckBoxView(isChecked: $viewModel.isChecked)
                 Text(LocalizedStrings.Register.termsConditions)

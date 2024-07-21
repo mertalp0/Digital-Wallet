@@ -49,6 +49,7 @@
 		94A278D22C4C3D8000DD8CF8 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A278D12C4C3D8000DD8CF8 /* LocalizedStrings.swift */; };
 		94A278D52C4C3E0400DD8CF8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94A278D32C4C3E0400DD8CF8 /* Localizable.strings */; };
 		94A278D72C4D146A00DD8CF8 /* DWColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A278D62C4D146A00DD8CF8 /* DWColors.swift */; };
+		94A278DA2C4D2B3100DD8CF8 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A278D92C4D2B3100DD8CF8 /* TextFieldModifier.swift */; };
 		94B229622C47215000A8AE58 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229612C47215000A8AE58 /* RegisterCoordinator.swift */; };
 		94B229642C47C6EC00A8AE58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */; };
 		94B229852C486C1E00A8AE58 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B229842C486C1E00A8AE58 /* HomeView.swift */; };
@@ -117,6 +118,7 @@
 		94A278D12C4C3D8000DD8CF8 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
 		94A278D42C4C3E0400DD8CF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		94A278D62C4D146A00DD8CF8 /* DWColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWColors.swift; sourceTree = "<group>"; };
+		94A278D92C4D2B3100DD8CF8 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		94B229612C47215000A8AE58 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		94B2297B2C47F98800A8AE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		94A1C3B92C3EB1A40018D02F /* DigitalWallet */ = {
 			isa = PBXGroup;
 			children = (
+				94A278D82C4D2B1400DD8CF8 /* Modifiers */,
 				94B2297B2C47F98800A8AE58 /* Info.plist */,
 				944398322C41390A00D8453E /* Enums */,
 				94A1C3E82C3EBC6D0018D02F /* Coordinators */,
@@ -399,6 +402,14 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
+		94A278D82C4D2B1400DD8CF8 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				94A278D92C4D2B3100DD8CF8 /* TextFieldModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		94B229832C486C1200A8AE58 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,6 +598,7 @@
 				9450A16B2C3ED04D008949B3 /* CustomButton.swift in Sources */,
 				94A1C3BB2C3EB1A40018D02F /* AppDelegate.swift in Sources */,
 				9443982E2C412B6E00D8453E /* UserModel.swift in Sources */,
+				94A278DA2C4D2B3100DD8CF8 /* TextFieldModifier.swift in Sources */,
 				94A1C3F32C3EBFEC0018D02F /* LoginView.swift in Sources */,
 				948D7A5B2C4AA5CE00806D3F /* EncryptionService.swift in Sources */,
 				948D7A4E2C4A3CAD00806D3F /* UserServiceProtocol.swift in Sources */,

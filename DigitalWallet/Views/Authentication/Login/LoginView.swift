@@ -21,7 +21,7 @@ struct LoginView: View {
                 .padding()
             Spacer().frame(height: 50)
             CustomTextField(placeholder: LocalizedStrings.Login.emailPlaceholder, text: $viewModel.email)
-            CustomTextField(placeholder: LocalizedStrings.Login.passwordPlaceholder, text: $viewModel.password)
+            CustomTextField(placeholder: LocalizedStrings.Login.passwordPlaceholder, textFieldType: .password, text: $viewModel.password)
             HStack {
                 Spacer()
                 Button(LocalizedStrings.Login.forgotPassword) {
