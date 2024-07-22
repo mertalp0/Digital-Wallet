@@ -14,11 +14,21 @@ class HomeViewModel: ObservableObject {
     private let userService: UserServiceProtocol
     private let accountService: AccountServiceProtocol
     
-    init(userService: UserServiceProtocol = UserService.shared , accountService : AccountServiceProtocol = AccountService()) {
+    init(userService: UserServiceProtocol = UserService.shared , onTapHome: @escaping ()-> Void, accountService : AccountServiceProtocol = AccountService()) {
+        self.goToHomeView = onTapHome
         self.userService = userService
         self.accountService = accountService
         fetchUser()
        
+    }
+    
+    private let goToHomeView: () -> Void
+
+
+
+    func goToRegister() {
+        print("sgfdhf")
+        goToHomeView()
     }
     
     private func fetchUser() {
