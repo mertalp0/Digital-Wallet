@@ -35,6 +35,14 @@
 "expense_card_earned_title" = "Earned";
 "expense_card_more_info_link" = "Tell me more";
 
+/* TransferView */
+"transfer_title" = "Transfer";
+"transfer_iban_placeholder" = "IBAN";
+"transfer_amount_placeholder" = "Amount";
+"transfer_payment_type" = "Payment Type";
+"transfer_description_placeholder" = "Description";
+"transfer_send_button" = "Send";
+
 /* Authentication Service Errors */
 "auth_firebase_error" = "Firebase error: %@";
 "auth_firebase_document_not_found" = "Firebase document not found.";

@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-class RegisterViewModel: ObservableObject {
+class RegisterViewModel: ObservableObject,RegisterViewModelProtocol {
     @Published var fullname: String = ""
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
-    
     @Published var isChecked : Bool = false
     @Published var isLoading: Bool = false
     @Published var alertMessage: String = ""
@@ -26,12 +25,15 @@ class RegisterViewModel: ObservableObject {
                guard validationResult.isValid else {
                    self.alertMessage = validationResult.errorMessage ?? "Error"
                    self.showAlert = true
+                   //TODO: Must be in DWErrors
                    completion(.failure(NSError(domain: "RegisterViewModel", code: 0, userInfo: [NSLocalizedDescriptionKey: self.alertMessage])))
                    return
                }
         guard isChecked else {
-            self.alertMessage = "Dont check"
+            //TODO: Must be in localizable
+            self.alertMessage = "Please agree to the terms and conditions."
             self.showAlert = true
+            //TODO: Must be in DWErrors
             completion(.failure(NSError(domain: "RegisterViewModel", code: 1, userInfo: [NSLocalizedDescriptionKey: self.alertMessage])))
             return
         }
@@ -47,7 +49,7 @@ class RegisterViewModel: ObservableObject {
                     self.password = ""
                     self.confirmPassword = ""
                     self.isChecked = false
-                    
+                    //TODO: Must be in Localizable
                     self.alertMessage = "Please verify your email address"
                     self.showAlert = true
                     completion(.success(success))

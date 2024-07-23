@@ -7,10 +7,11 @@
 
 import Foundation
 
-enum PaymentType: String, Codable {
-    case iban = "IBAN"
-    case card = "Card"
-    case cash = "Cash"
+enum PaymentType: String, Codable, CaseIterable {
+    case rent = "Rent"
+    case salary = "Salary"
+    case transfer = "Transfer"
+    case other = "Other"
 }
 
 struct Transfer: Identifiable, Codable {
