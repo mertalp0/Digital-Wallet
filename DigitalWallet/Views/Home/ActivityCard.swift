@@ -24,8 +24,7 @@ struct ActivityCard: View {
                     .frame(width: 20, height: 20)
                     .padding(15)
                     .foregroundColor(.white)
-                //TODO: MUST BE IN COLOR THEME
-                    .background(Color(hex: "#5AA5E2"))
+                    .background(DWColors.primary)
                     .cornerRadius(10)
                 Text(type.title)
                     .font(.headline)

@@ -6,10 +6,12 @@
 //
 import SwiftUI
 
+
+
 struct TransferView: View {
     @ObservedObject var viewModel: TransferViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
+    @State private var selectedPaymentMethod: PaymentMethod = .iban
     var body: some View {
         VStack {
             HStack {
@@ -30,8 +32,14 @@ struct TransferView: View {
                         .fontWeight(.bold)
                 }
             }
+            Picker("Method", selection: $selectedPaymentMethod) {
+                Text("IBAN").tag(PaymentMethod.iban)
+                           Text("QR").tag(PaymentMethod.qr)}
+                       .pickerStyle(SegmentedPickerStyle())
+                       .padding()
             ScrollView {
-                VStack {
+                if selectedPaymentMethod == .iban {
+                    VStack {
                     VStack(alignment: .leading, spacing: 16) {
                         VStack(alignment: .leading) {
                             Text(LocalizedStrings.Transfer.ibanPlaceholder)
@@ -77,7 +85,9 @@ struct TransferView: View {
                     CustomButton(title: LocalizedStrings.Transfer.sendButton, size: .large) {
                         viewModel.sendMoney()
                     }
-                }
+                    }}else{
+                        Text("QR PAGE ")
+                    }
             }
             .alert(isPresented: $viewModel.showAlert) {
                 Alert(title: Text("Transfer Status"), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))

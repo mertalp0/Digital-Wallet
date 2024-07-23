@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUI
 
 
-class LoginViewModel: ObservableObject {
+class LoginViewModel: ObservableObject,LoginViewModelProtocol {
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var alertMessage: String = ""
@@ -43,13 +43,12 @@ class LoginViewModel: ObservableObject {
 
     func login(completion: @escaping (Result<UserModel, Error>) -> Void) {
    
-        
-
         let validationResult = Validator.loginValid(email: email, password: password)
                
         guard validationResult.isValid else {
             self.alertMessage = validationResult.errorMessage ?? "Error"
             self.showAlert = true
+            //TODO: Must be in DWErrors
             completion(.failure(NSError(domain: "LoginViewModel", code: 0, userInfo: [NSLocalizedDescriptionKey: self.alertMessage])))
             return
         }

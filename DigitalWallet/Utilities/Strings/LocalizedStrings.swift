@@ -8,6 +8,7 @@
 import Foundation
 
 final class LocalizedStrings {
+    
     struct Login {
         static var welcomeBack: String {
             return NSLocalizedString("login_welcome_back", comment: "Welcome back text")
@@ -90,6 +91,27 @@ final class LocalizedStrings {
         }
        
     }
+    
+    struct Transfer {
+        static var ibanPlaceholder: String {
+            return NSLocalizedString("transfer_iban_placeholder", comment: "IBAN placeholder text")
+        }
+        static var amountPlaceholder: String {
+            return NSLocalizedString("transfer_amount_placeholder", comment: "Amount placeholder text")
+        }
+        static var paymentType: String {
+            return NSLocalizedString("transfer_payment_type", comment: "Payment Type label text")
+        }
+        static var descriptionPlaceholder: String {
+            return NSLocalizedString("transfer_description_placeholder", comment: "Description placeholder text")
+        }
+        static var sendButton: String {
+            return NSLocalizedString("transfer_send_button", comment: "Send button text")
+        }
+        static var title: String {
+            return NSLocalizedString("transfer_title", comment: "Transfer title")
+        }
+    }
 
     struct AuthenticationError {
         static var firebaseError: String {
@@ -166,24 +188,5 @@ final class LocalizedStrings {
             }
         
     }
-    struct Transfer {
-        static var ibanPlaceholder: String {
-            return NSLocalizedString("transfer_iban_placeholder", comment: "IBAN placeholder text")
-        }
-        static var amountPlaceholder: String {
-            return NSLocalizedString("transfer_amount_placeholder", comment: "Amount placeholder text")
-        }
-        static var paymentType: String {
-            return NSLocalizedString("transfer_payment_type", comment: "Payment Type label text")
-        }
-        static var descriptionPlaceholder: String {
-            return NSLocalizedString("transfer_description_placeholder", comment: "Description placeholder text")
-        }
-        static var sendButton: String {
-            return NSLocalizedString("transfer_send_button", comment: "Send button text")
-        }
-        static var title: String {
-            return NSLocalizedString("transfer_title", comment: "Transfer title")
-        }
-    }
+
 }
