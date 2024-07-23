@@ -8,5 +8,5 @@
 import Foundation
 
 protocol TransferServiceProtocol {
-    func sendMoney(iban: String, amount: Double, date: Date, type: String, description: String, completion: @escaping (Bool?, Error?) -> Void)
+    func sendMoney(iban: String,senderUser :UserModel, amount: Double, date: Date, type: String, description: String, completion: @escaping (Bool?, Error?) -> Void)
 }

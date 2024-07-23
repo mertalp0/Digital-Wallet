@@ -10,7 +10,6 @@ struct TransferView: View {
     @ObservedObject var viewModel: TransferViewModel
 
     var body: some View {
-        
         VStack(spacing: 16) {
             CustomTextField(placeholder: "IBAN", text: $viewModel.iban)
                 .keyboardType(.default)
@@ -35,7 +34,9 @@ struct TransferView: View {
             .padding()
         }
         .padding()
-     
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text("Transfer Status"), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))
+        }
     }
 }
 

@@ -72,6 +72,7 @@ final class LocalizedStrings {
         static var availableBalance: String {
             return NSLocalizedString("home_available_balance", comment: "Available balance text")
         }
+       
         static var spentDescription: String {
             return NSLocalizedString("home_spent_description", comment: "Spent description text")
         }
@@ -87,6 +88,7 @@ final class LocalizedStrings {
         static var moreInfoLink: String {
             return NSLocalizedString("expense_card_more_info_link", comment: "More info link text")
         }
+       
     }
 
     struct AuthenticationError {
@@ -144,5 +146,23 @@ final class LocalizedStrings {
         static var firebaseError: String {
             return NSLocalizedString("account_error_firebase_error", comment: "Firebase error description")
         }
+    }
+
+    struct TransferError {
+            static var insufficientFunds: String {
+                return NSLocalizedString("transfer_error_insufficient_funds", comment: "Insufficient funds to complete the transfer.")
+            }
+            static var unableToRetrieveSenderAccount: String {
+                return NSLocalizedString("transfer_error_unable_to_retrieve_sender_account", comment: "Unable to retrieve sender's account information.")
+            }
+            static var unableToRetrieveReceiverAccount: String {
+                return NSLocalizedString("transfer_error_unable_to_retrieve_receiver_account", comment: "Unable to retrieve receiver's account information.")
+            }
+            static var unableToRetrieveAccountData: String {
+                return NSLocalizedString("transfer_error_unable_to_retrieve_account_data", comment: "Unable to retrieve account data.")
+            }
+            static var firebaseError: String {
+                return NSLocalizedString("transfer_error_firebase_error", comment: "Firebase error: %@")
+            }
     }
 }

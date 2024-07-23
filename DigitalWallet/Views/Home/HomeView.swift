@@ -18,7 +18,7 @@ struct HomeView: View {
             }
             .edgesIgnoringSafeArea(.all)
             
-            if let user = viewModel.user, let account = viewModel.account {
+            if let _ = viewModel.user, let account = viewModel.account {
                 
                 VStack(spacing: 20) {
                    
@@ -40,8 +40,7 @@ struct HomeView: View {
                         ExpenseCard(
                             spentAmount: account.spent,
                             earnedAmount: account.earned,
-                            spentDescription: String(format: LocalizedStrings.Home.spentDescription, account.spent),
-                            moreInfoLink: "Tell me more" // This could also be localized if needed
+                            spentDescription: String(format: LocalizedStrings.Home.spentDescription, account.spent)
                         )
                     }
                     
@@ -52,7 +51,7 @@ struct HomeView: View {
                     .padding(.horizontal, 15)
                     
                     HStack {
-                        ActivityCard(type: .transfer, action: { viewModel.goToRegister()})
+                        ActivityCard(type: .transfer, action: { viewModel.onTapTransferView()})
                         ActivityCard(type: .myCard, action:{})
                         ActivityCard(type: .insight, action:{})
                     }
@@ -64,6 +63,8 @@ struct HomeView: View {
                 ProgressView()
                 Spacer()
             }
+        }.onAppear {
+            viewModel.fetchUser()
         }
     }
 }

@@ -10,13 +10,13 @@ import SwiftUI
 
 extension Color {
     init(hex: String) {
-        // Temizleme işlemi
+      
         var cleanedHex = hex.trimmingCharacters(in: .whitespacesAndNewlines)
         cleanedHex = cleanedHex.replacingOccurrences(of: "#", with: "")
 
-        // Renk kodunun uzunluğunu kontrol etme
+      
         if cleanedHex.count == 6 {
-            cleanedHex.append("FF") // Alpha kanalını varsayılan olarak 255 (tam opak) olarak ayarla
+            cleanedHex.append("FF")
         }
 
         
