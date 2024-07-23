@@ -39,7 +39,7 @@ struct RegisterView: View {
             Spacer().frame(height: 20)
             CustomButton(title: LocalizedStrings.Register.signUpButton, size: .large) {
                 viewModel.register { result in
-                    // Handle register result
+
                 }
             }
             Spacer()

@@ -10,7 +10,7 @@ class TransferViewModel: ObservableObject {
     @Published var iban: String = ""
     @Published var amount: String = ""
     @Published var description: String = ""
-    @Published var paymentType: PaymentType = .iban
+    @Published var paymentType: PaymentType = .other
     @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
     
@@ -49,7 +49,7 @@ class TransferViewModel: ObservableObject {
                 self.alertMessage = "Error sending money: \(error.localizedDescription)"
                 self.showAlert = true
             } else if success == true {
-                self.amount=""
+                self.amount = ""
                 self.description = ""
                 self.iban = ""
                 self.alertMessage = "Money sent successfully!"

@@ -18,13 +18,16 @@ class HomeCoordinator: ObservableObject {
     func makeViewController() -> UIViewController {
         let view = HomeView(
             viewModel: HomeViewModel(pushTransferView: pushTransferView))
-        let hostingVC = UIHostingController(rootView: view.navigationBarBackButtonHidden(true))
+        let hostingVC = UIHostingController(rootView: view)
+                DispatchQueue.main.async {
+            hostingVC.navigationController?.navigationBar.isHidden = true
+        }
         return hostingVC
     }
     
     func pushTransferView() {
         let coordinator = TransferCoordinator(navigationController: navigationController)
-        let registerView = coordinator.makeViewController()
-        navigationController?.pushViewController(registerView, animated: true)
+        let transferView = coordinator.makeViewController()
+        navigationController?.pushViewController(transferView, animated: true)
     }
 }

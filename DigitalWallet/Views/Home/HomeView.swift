@@ -58,6 +58,7 @@ struct HomeView: View {
                     Spacer()
                 }
                 .frame(width: Constant.width, height: Constant.height)
+                .padding(.top, 80)
                 
             } else {
                 ProgressView()

@@ -25,6 +25,9 @@ class TransferCoordinator: ObservableObject {
         let view = TransferView(
             viewModel: TransferViewModel())
         let hostingVC = UIHostingController(rootView: view)
+                DispatchQueue.main.async {
+            hostingVC.navigationController?.navigationBar.isHidden = true
+        }
         return hostingVC
     }
     
