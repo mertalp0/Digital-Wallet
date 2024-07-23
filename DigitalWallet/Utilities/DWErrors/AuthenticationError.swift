@@ -4,6 +4,7 @@
 //
 //  Created by mert alp on 20.07.2024.
 //
+
 class AuthenticationServiceError: BaseError {
     enum ErrorType {
         // Firebase Error Types

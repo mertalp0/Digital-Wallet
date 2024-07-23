@@ -56,3 +56,10 @@
 "account_error_document_not_found" = "Account document does not exist.";
 "account_error_data_corrupted" = "Account data is corrupted.";
 "account_error_firebase_error" = "Firebase error: %@";
+
+/* Transfer Service Errors */
+"transfer_error_insufficient_funds" = "Insufficient funds to complete the transfer.";
+"transfer_error_unable_to_retrieve_sender_account" = "Unable to retrieve sender's account information.";
+"transfer_error_unable_to_retrieve_receiver_account" = "Unable to retrieve receiver's account information.";
+"transfer_error_unable_to_retrieve_account_data" = "Unable to retrieve account data.";
+"transfer_error_firebase_error" = "Firebase error: %@";

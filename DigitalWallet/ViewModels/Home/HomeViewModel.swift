@@ -14,14 +14,21 @@ class HomeViewModel: ObservableObject {
     private let userService: UserServiceProtocol
     private let accountService: AccountServiceProtocol
     
-    init(userService: UserServiceProtocol = UserService.shared , accountService : AccountServiceProtocol = AccountService()) {
+    init(userService: UserServiceProtocol = UserService.shared , pushTransferView: @escaping ()-> Void, accountService : AccountServiceProtocol = AccountService()) {
+        self.pushTransferView = pushTransferView
         self.userService = userService
         self.accountService = accountService
         fetchUser()
        
     }
     
-    private func fetchUser() {
+    private let pushTransferView: () -> Void
+
+    func onTapTransferView() {
+        pushTransferView()
+    }
+    
+     func fetchUser() {
         userService.fetchUser { [weak self] user, error in
             if let error = error {
             

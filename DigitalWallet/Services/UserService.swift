@@ -13,6 +13,8 @@ class UserService: UserServiceProtocol {
     internal let db = Firestore.firestore()
     internal let authService: AuthenticationServiceProtocol
     static let shared = UserService()
+    @Published var user: UserModel?
+
     
     init(authService: AuthenticationServiceProtocol = AuthenticationService.shared) {
         self.authService = authService
@@ -33,10 +35,11 @@ class UserService: UserServiceProtocol {
                 if let data = snapshot.data(),
                    let fullName = data["fullname"] as? String,
                    let email = data["email"] as? String,
-                   let accountId = data["accountId"] as? String,
+                   let accountId = data["accountIban"] as? String,
                    let cards = data["cards"] as? [String] {
                     
                     let user = UserModel(id: userId, fullName: fullName, email: email, accountId: accountId, cards: cards)
+                    UserService.shared.user = user
                     completion(user, nil)
                 } else {
                     completion(nil, UserServiceError(type: .userDataCorrupted))

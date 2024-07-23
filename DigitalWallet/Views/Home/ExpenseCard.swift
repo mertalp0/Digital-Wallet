@@ -11,7 +11,6 @@ struct ExpenseCard: View {
     var spentAmount: String
     var earnedAmount: String
     var spentDescription: String
-    var moreInfoLink: String
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -58,7 +57,7 @@ struct ExpenseCard: View {
                 
                 Text(LocalizedStrings.Home.moreInfoLink)
                     .font(.body)
-                    .foregroundColor(Color(hex: "#5AA5E2"))
+                    .foregroundColor(DWColors.primary)
                     .padding([.bottom, .horizontal])
             }
         }

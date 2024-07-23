@@ -8,21 +8,24 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject private var viewModel = HomeViewModel()
-    
+    @ObservedObject  var viewModel : HomeViewModel
     var body: some View {
-        ZStack {
+        ZStack (alignment: .top){
+            
             VStack(spacing: 0) {
-                Color(hex: "#5AA5E2")
+                DWColors.primary
                     .frame(height: Constant.height / 3)
-                Color.clear
             }
             .edgesIgnoringSafeArea(.all)
             
-            if let user = viewModel.user, let account = viewModel.account {
+            if let _ = viewModel.user, let account = viewModel.account {
+                
                 VStack(spacing: 20) {
+                   
                     HStack {
+                        
                         VStack(alignment: .leading) {
+                            
                             Text("$\(account.balance)")
                                 .font(.system(size: 40, weight: .bold))
                             Text(LocalizedStrings.Home.availableBalance)
@@ -33,13 +36,11 @@ struct HomeView: View {
                             .font(.system(size: 35))
                     }
                     .padding(EdgeInsets(top: 15, leading: 50, bottom: 15, trailing: 50))
-                    
                     HStack(alignment: .center) {
                         ExpenseCard(
                             spentAmount: account.spent,
                             earnedAmount: account.earned,
-                            spentDescription: String(format: LocalizedStrings.Home.spentDescription, account.spent),
-                            moreInfoLink: "Tell me more" // This could also be localized if needed
+                            spentDescription: String(format: LocalizedStrings.Home.spentDescription, account.spent)
                         )
                     }
                     
@@ -50,9 +51,9 @@ struct HomeView: View {
                     .padding(.horizontal, 15)
                     
                     HStack {
-                        ActivityCard(type: .transfer)
-                        ActivityCard(type: .myCard)
-                        ActivityCard(type: .insight)
+                        ActivityCard(type: .transfer, action: { viewModel.onTapTransferView()})
+                        ActivityCard(type: .myCard, action:{})
+                        ActivityCard(type: .insight, action:{})
                     }
                     Spacer()
                 }
@@ -62,10 +63,9 @@ struct HomeView: View {
                 ProgressView()
                 Spacer()
             }
+        }.onAppear {
+            viewModel.fetchUser()
         }
     }
 }
 
-#Preview {
-    HomeView()
-}

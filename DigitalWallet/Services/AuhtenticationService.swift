@@ -53,7 +53,7 @@ class AuthenticationService: AuthenticationServiceProtocol {
                     guard let id = data["id"] as? String,
                           let fullName = data["fullname"] as? String,
                           let email = data["email"] as? String,
-                          let accountId = data["accountId"] as? String,
+                          let accountId = data["accountIban"] as? String,
                           let cards = data["cards"] as? [String] else {
                         completion(.failure(AuthenticationServiceError(type: .firebaseDataCorrupted)))
                         return
@@ -97,7 +97,7 @@ class AuthenticationService: AuthenticationServiceProtocol {
                     return
                 }
                 
-                let userData: [String: Any] = ["id": user.uid, "fullname": fullname, "email": email, "password": encryptedPassword, "accountId": account.id, "cards": []]
+                let userData: [String: Any] = ["id": user.uid, "fullname": fullname, "email": email, "password": encryptedPassword, "accountIban": account.iban, "cards": []]
                 self.db.collection("users").document(user.uid).setData(userData) { error in
                     if let error = error {
                         completion(.failure(AuthenticationServiceError(type: .firebaseError(error))))
