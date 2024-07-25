@@ -13,3 +13,21 @@ extension String {
         return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self)
     }
 }
+
+extension String {
+    
+    func chunked(into size: Int) -> [String] {
+        var chunks: [String] = []
+        var startIndex = self.startIndex
+        while startIndex < self.endIndex {
+            let endIndex = self.index(startIndex, offsetBy: size, limitedBy: self.endIndex) ?? self.endIndex
+            chunks.append(String(self[startIndex..<endIndex]))
+            startIndex = endIndex
+        }
+        return chunks
+    }
+    
+    var formattedIban: String {
+        return self.chunked(into: 4).joined(separator: " ")
+    }
+}

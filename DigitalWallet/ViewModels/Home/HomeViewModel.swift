@@ -5,6 +5,7 @@
 //  Created by mert alp on 18.07.2024.
 //
 import Foundation
+import SwiftUI
 
 class HomeViewModel: ObservableObject, HomeViewModelProtocol {
     @Published var user: UserModel?
@@ -26,6 +27,10 @@ class HomeViewModel: ObservableObject, HomeViewModelProtocol {
     func onTapTransferView() {
         pushTransferView()
     }
+    
+    func copyToClipboard(text: String) {
+           UIPasteboard.general.string = text
+       }
     
     func fetchUser() {
         isLoading = true // Start loading
