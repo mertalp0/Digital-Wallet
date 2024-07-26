@@ -43,7 +43,7 @@ class LoginViewModel: ObservableObject,LoginViewModelProtocol {
 
     func login(completion: @escaping (Result<UserModel, Error>) -> Void) {
    
-        let validationResult = Validator.loginValid(email: email, password: password)
+        let validationResult = Validator.validateLogin(email: email, password: password)
                
         guard validationResult.isValid else {
             self.alertMessage = validationResult.errorMessage ?? "Error"

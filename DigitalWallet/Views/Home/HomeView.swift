@@ -15,7 +15,7 @@ struct HomeView: View {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle())
                     .scaleEffect(1.5, anchor: .center)
-            } else if let _ = viewModel.user, let account = viewModel.account {
+            } else if let user = viewModel.user, let account = viewModel.account {
                 ZStack(alignment: .top){
                     VStack(spacing: 0) {
                         DWColors.primary
@@ -29,6 +29,17 @@ struct HomeView: View {
                                     .font(.system(size: 40, weight: .bold))
                                 Text(LocalizedStrings.Home.availableBalance)
                                     .font(.system(size: 15, weight: .medium))
+                                HStack{
+                                    Text(user.accountId.formattedIban).font(.system(size: 13, weight: .bold))
+                                    
+                                    Button(action: {
+                                        viewModel.copyToClipboard(text: user.accountId)
+                                    }) {
+                                        Image(systemName: "doc.on.doc")
+                                            .foregroundColor(DWColors.text)
+                                            .font(.system(size: 12))
+                                    }
+                                }
                             }
                             Spacer()
                             Image(systemName: "person.circle")
@@ -60,7 +71,6 @@ struct HomeView: View {
                     .frame(width: Constant.width, height: Constant.height)
                     .padding(.top, 80)
                 }
-              
             }
         }
         .onAppear {
