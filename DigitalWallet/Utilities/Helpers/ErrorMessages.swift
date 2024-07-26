@@ -7,19 +7,40 @@
 
 import Foundation
 
-enum ErrorMessages: String {
-    case emptyFullName = "Please enter your fullname."
-    case emptyEmail = "Please enter your email address."
-    case emptyPassword = "Please enter a password."
-    case invalidEmail = "Please enter a valid email address."
-    case shortPassword = "Password must be at least 6 characters long."
-    case passwordMismatch = "Passwords do not match."
-    case emptyIban = "Please enter an IBAN."
-    case invalidAmount = "Please enter a valid amount."
-    case emptyDescription = "Please enter a description."
-    case shortIban = "Password must be at least 16 characters long."
-    
-    var message: String {
-        return self.rawValue
+enum ValidationError: LocalizedError {
+    case emptyEmail
+    case emptyPassword
+    case invalidEmail
+    case shortPassword
+    case emptyFullName
+    case passwordMismatch
+    case emptyIban
+    case invalidAmount
+    case emptyDescription
+    case shortIban
+    //TODO: Must be in localizable
+    var errorDescription: String? {
+        switch self {
+        case .emptyEmail:
+            return "Email cannot be empty."
+        case .emptyPassword:
+            return "Password cannot be empty."
+        case .invalidEmail:
+            return "Email format is invalid."
+        case .shortPassword:
+            return "Password must be at least 6 characters long."
+        case .emptyFullName:
+            return "Full name cannot be empty."
+        case .passwordMismatch:
+            return "Passwords do not match."
+        case .emptyIban:
+            return "IBAN cannot be empty."
+        case .invalidAmount:
+            return "Amount is invalid."
+        case .emptyDescription:
+            return "Description cannot be empty."
+        case .shortIban:
+            return "IBAN is too short."
+        }
     }
 }

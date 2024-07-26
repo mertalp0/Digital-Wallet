@@ -14,6 +14,7 @@ class TransferViewModel: ObservableObject, TransferViewModelProtocol {
     @Published var paymentType: PaymentType = .other
     @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
+    @Published var selectedAmount : AmountCardType? = nil
     
     private var transferService: TransferService
     private var userService = UserService.shared
@@ -23,27 +24,42 @@ class TransferViewModel: ObservableObject, TransferViewModelProtocol {
     }
     
     func sendMoney() {
-        let validation = Validator.transferValid(iban: iban, amount: amount, description: description)
-        
-        guard validation.isValid else {
-            //TODO: Must be in localizable
-            alertMessage = validation.errorMessage ?? "Unknown validation error"
-            showAlert = true
-            return
-        }
-       
-        guard let amount = Double(amount) else {
-            //TODO: Must be in localizable
-            alertMessage = "Invalid amount"
-            showAlert = true
-            return
-        }
-        
+        let validation = Validator.validateTransfer(iban: "TR\(iban)", selectedAmount: selectedAmount, amount: amount, description: description)
+           
+           guard validation.isValid else {
+               //TODO: Must be in localizable
+               alertMessage = validation.errorMessage ?? "Unknown validation error"
+               showAlert = true
+               return
+           }
+           
+           var finalAmount: Double?
+           
+           if selectedAmount != .other {
+               if let displayText = selectedAmount?.displayText {
+                   let newAmountString = String(displayText.dropFirst())
+                   finalAmount = Double(newAmountString)
+               }
+           } else {
+               finalAmount = Double(amount)
+           }
+           
+           guard let validAmount = finalAmount else {
+               //TODO: Must be in localizable
+               alertMessage = "Invalid amount"
+               showAlert = true
+               return
+           }
+           
         let currentDate = Date()
+        print(validAmount)
+       
+        let cleanIban = iban.replacingOccurrences(of: " ", with: "")
+        print("TR\(cleanIban)")
         transferService.sendMoney(
-            iban: iban,
+            iban: "TR\(cleanIban)",
             senderUser: userService.user!,
-            amount: amount,
+            amount: validAmount,
             date: currentDate,
             type: paymentType.rawValue,
             description: description

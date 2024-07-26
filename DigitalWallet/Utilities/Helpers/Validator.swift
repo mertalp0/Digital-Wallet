@@ -18,82 +18,82 @@ struct ValidationResult {
 }
 
 struct Validator {
-    
-    static func loginValid(email: String, password: String) -> ValidationResult {
-        if email.isEmpty {
-            return ValidationResult(errorMessage: ErrorMessages.emptyEmail.message)
+
+    static func validateLogin(email: String, password: String) -> ValidationResult {
+        guard !email.isEmpty else {
+            return ValidationResult(errorMessage: ValidationError.emptyEmail.localizedDescription)
         }
         
-        if password.isEmpty {
-            return ValidationResult(errorMessage: ErrorMessages.emptyPassword.message)
+        guard !password.isEmpty else {
+            return ValidationResult(errorMessage: ValidationError.emptyPassword.localizedDescription)
         }
         
-        if !isValidEmail(email) {
-            return ValidationResult(errorMessage: ErrorMessages.invalidEmail.message)
+        guard isValidEmail(email) else {
+            return ValidationResult(errorMessage: ValidationError.invalidEmail.localizedDescription)
         }
         
-        if password.count < 6 {
-            return ValidationResult(errorMessage: ErrorMessages.shortPassword.message)
-        }
-        
-        return ValidationResult(isValid: true)
-    }
-    
-    static func registerValid(fullname: String, email: String, password: String, confirmPassword: String) -> ValidationResult {
-        
-        if fullname.isEmpty {
-            return ValidationResult(errorMessage: ErrorMessages.emptyFullName.message)
-        }
-        
-        if email.isEmpty {
-            return ValidationResult(errorMessage: ErrorMessages.emptyEmail.message)
-        }
-        
-        if password.isEmpty {
-            return ValidationResult(errorMessage: ErrorMessages.emptyPassword.message)
-        }
-        
-        if password.count < 6 {
-            return ValidationResult(errorMessage: ErrorMessages.shortPassword.message)
-        }
-        
-        if password != confirmPassword {
-            return ValidationResult(errorMessage: ErrorMessages.passwordMismatch.message)
-        }
-        
-        if !isValidEmail(email) {
-            return ValidationResult(errorMessage: ErrorMessages.invalidEmail.message)
+        guard password.count >= 6 else {
+            return ValidationResult(errorMessage: ValidationError.shortPassword.localizedDescription)
         }
         
         return ValidationResult(isValid: true)
     }
     
-    static func transferValid(iban: String, amount: String, description: String) -> ValidationResult {
-        if iban.isEmpty {
-            return ValidationResult(errorMessage: ErrorMessages.emptyIban.message)
+    static func validateRegistration(fullname: String, email: String, password: String, confirmPassword: String) -> ValidationResult {
+        guard !fullname.isEmpty else {
+            return ValidationResult(errorMessage: ValidationError.emptyFullName.localizedDescription)
         }
         
-        guard let amountValue = Double(amount), amountValue > 0 else {
-            return ValidationResult(errorMessage: ErrorMessages.invalidAmount.message)
+        guard !email.isEmpty else {
+            return ValidationResult(errorMessage: ValidationError.emptyEmail.localizedDescription)
         }
         
-        if description.isEmpty {
-            return ValidationResult(errorMessage: ErrorMessages.emptyDescription.message)
+        guard !password.isEmpty else {
+            return ValidationResult(errorMessage: ValidationError.emptyPassword.localizedDescription)
         }
-        if iban.count < 16{
-            return ValidationResult(errorMessage: ErrorMessages.shortIban.message)
+        
+        guard password.count >= 6 else {
+            return ValidationResult(errorMessage: ValidationError.shortPassword.localizedDescription)
+        }
+        
+        guard password == confirmPassword else {
+            return ValidationResult(errorMessage: ValidationError.passwordMismatch.localizedDescription)
+        }
+        
+        guard isValidEmail(email) else {
+            return ValidationResult(errorMessage: ValidationError.invalidEmail.localizedDescription)
         }
         
         return ValidationResult(isValid: true)
     }
     
-    
+    static func validateTransfer(iban: String, selectedAmount: AmountCardType?, amount: String?, description: String) -> ValidationResult {
+        guard !iban.isEmpty && iban != "TR" else {
+            return ValidationResult(errorMessage: ValidationError.emptyIban.localizedDescription)
+        }
+
+        guard let selectedAmount = selectedAmount else {
+            return ValidationResult(errorMessage: ValidationError.invalidAmount.localizedDescription)
+        }
+        
+        if selectedAmount == .other, let amount = amount, amount.isEmpty {
+            return ValidationResult(errorMessage: ValidationError.invalidAmount.localizedDescription)
+        }
+        
+        guard !description.isEmpty else {
+            return ValidationResult(errorMessage: ValidationError.emptyDescription.localizedDescription)
+        }
+        
+        //TODO: the count will change with 32 
+        guard iban.count >= 26 else {
+            return ValidationResult(errorMessage: ValidationError.shortIban.localizedDescription)
+        }
+        
+        return ValidationResult(isValid: true)
+    }
+
     private static func isValidEmail(_ email: String) -> Bool {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: email)
     }
-    
-    
 }
-
-

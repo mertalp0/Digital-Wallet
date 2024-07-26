@@ -20,7 +20,7 @@ class RegisterViewModel: ObservableObject,RegisterViewModelProtocol {
 
     
     func register(completion: @escaping (Result<Bool, Error>) -> Void) {
-        let validationResult = Validator.registerValid(fullname: fullname, email: email, password: password, confirmPassword: confirmPassword)
+        let validationResult = Validator.validateRegistration(fullname: fullname, email: email, password: password, confirmPassword: confirmPassword)
                
                guard validationResult.isValid else {
                    self.alertMessage = validationResult.errorMessage ?? "Error"
