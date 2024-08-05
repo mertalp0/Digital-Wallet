@@ -63,7 +63,7 @@ struct HomeView: View {
                         
                         HStack {
                             ActivityCard(type: .transfer, action: { viewModel.onTapTransferView() })
-                            ActivityCard(type: .myCard, action: {})
+                            ActivityCard(type: .myCard, action: { viewModel.onTapMyCardView()})
                             ActivityCard(type: .insight, action: {})
                         }
                         Spacer()

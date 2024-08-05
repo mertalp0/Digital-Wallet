@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Account {
+struct Account {
   
     var iban: String
     var balance: String

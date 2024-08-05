@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserModel {
+struct UserModel {
     var id: String
     var fullName: String
     var email: String

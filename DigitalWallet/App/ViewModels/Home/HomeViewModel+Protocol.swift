@@ -12,5 +12,6 @@ protocol HomeViewModelProtocol: ObservableObject {
     var account: Account? { get set }
     
     func onTapTransferView()
+    func onTapMyCardView()
     func fetchUser()
 }
