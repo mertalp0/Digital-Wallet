@@ -1,13 +1,14 @@
 //
-//  HomeCoordinator.swift
+//  MyCardCoordinator.swift
 //  DigitalWallet
 //
-//  Created by mert alp on 18.07.2024.
+//  Created by mert alp on 28.07.2024.
 //
 
+import Foundation
 import SwiftUI
 
-class HomeCoordinator: ObservableObject {
+class CardsCoordinator: ObservableObject {
     
     private weak var navigationController: UINavigationController?
 
@@ -16,8 +17,8 @@ class HomeCoordinator: ObservableObject {
     }
     
     func makeViewController() -> UIViewController {
-        let view = HomeView(
-            viewModel: HomeViewModel(pushTransferView: pushTransferView))
+        let view = CardsScene(
+            viewModel: CardsViewModel())
         let hostingVC = UIHostingController(rootView: view)
                 DispatchQueue.main.async {
             hostingVC.navigationController?.navigationBar.isHidden = true
@@ -25,9 +26,4 @@ class HomeCoordinator: ObservableObject {
         return hostingVC
     }
     
-    func pushTransferView() {
-        let coordinator = TransferCoordinator(navigationController: navigationController)
-        let transferView = coordinator.makeViewController()
-        navigationController?.pushViewController(transferView, animated: true)
-    }
 }

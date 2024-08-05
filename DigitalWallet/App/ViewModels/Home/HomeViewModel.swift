@@ -8,6 +8,8 @@ import Foundation
 import SwiftUI
 
 class HomeViewModel: ObservableObject, HomeViewModelProtocol {
+
+    
     @Published var user: UserModel?
     @Published var account: Account?
     @Published var isLoading: Bool = false // Add this line
@@ -15,17 +17,22 @@ class HomeViewModel: ObservableObject, HomeViewModelProtocol {
     private let userService: UserServiceProtocol
     private let accountService: AccountServiceProtocol
     
-    init(userService: UserServiceProtocol = UserService.shared, pushTransferView: @escaping () -> Void, accountService: AccountServiceProtocol = AccountService()) {
+    init(userService: UserServiceProtocol = UserService.shared, pushTransferView: @escaping () -> Void, pushMyCardView: @escaping () -> Void, accountService: AccountServiceProtocol = AccountService()) {
         self.pushTransferView = pushTransferView
+        self.pushMyCardView = pushMyCardView
         self.userService = userService
         self.accountService = accountService
         fetchUser()
     }
     
     private let pushTransferView: () -> Void
-
+    private let pushMyCardView: () -> Void
+    
     func onTapTransferView() {
         pushTransferView()
+    }
+    func onTapMyCardView() {
+        pushMyCardView()
     }
     
     func copyToClipboard(text: String) {
