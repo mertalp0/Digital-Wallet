@@ -84,7 +84,6 @@ struct Validator {
             return ValidationResult(errorMessage: ValidationError.emptyDescription.localizedDescription)
         }
         
-        //TODO: the count will change with 32 
         guard iban.count >= 26 else {
             return ValidationResult(errorMessage: ValidationError.shortIban.localizedDescription)
         }

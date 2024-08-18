@@ -30,10 +30,10 @@ struct HomeView: View {
                                 Text(LocalizedStrings.Home.availableBalance)
                                     .font(.system(size: 15, weight: .medium))
                                 HStack{
-                                    Text(user.accountId.formattedIban).font(.system(size: 13, weight: .bold))
+                                    Text(user.accountIban.formattedIban).font(.system(size: 13, weight: .bold))
                                     
                                     Button(action: {
-                                        viewModel.copyToClipboard(text: user.accountId)
+                                        viewModel.copyToClipboard(text: user.accountIban)
                                     }) {
                                         Image(systemName: "doc.on.doc")
                                             .foregroundColor(DWColors.text)

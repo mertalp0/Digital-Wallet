@@ -352,8 +352,6 @@
 				94A278D82C4D2B1400DD8CF8 /* Modifiers */,
 				94B2297B2C47F98800A8AE58 /* Info.plist */,
 				944398322C41390A00D8453E /* Enums */,
-				94A1C3E82C3EBC6D0018D02F /* Coordinators */,
-				9492EE9C2C3FAD0100FA0947 /* GoogleService-Info.plist */,
 				94A1C40A2C3EC4AF0018D02F /* Components */,
 				94A1C4072C3EC4780018D02F /* Extensions */,
 				94A1C4022C3EC19F0018D02F /* Utilities */,
@@ -386,7 +384,6 @@
 			isa = PBXGroup;
 			children = (
 				941B4EAD2C56A719000BFD87 /* Cards */,
-				94A278E32C4D2D9400DD8CF8 /* Transfer */,
 				94B229882C486C7600A8AE58 /* Home */,
 				94A1C3F42C3EBFFA0018D02F /* Authentication */,
 			);
@@ -407,6 +404,7 @@
 		94A1C3E62C3EBC110018D02F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9492EE9C2C3FAD0100FA0947 /* GoogleService-Info.plist */,
 				94A278D32C4C3E0400DD8CF8 /* Localizable.strings */,
 				94A1C3BA2C3EB1A40018D02F /* AppDelegate.swift */,
 				94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */,
@@ -423,13 +421,6 @@
 				94A1C3E92C3EBCBD0018D02F /* Login */,
 			);
 			path = Authentication;
-			sourceTree = "<group>";
-		};
-		94A1C3E82C3EBC6D0018D02F /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		94A1C3E92C3EBCBD0018D02F /* Login */ = {
@@ -575,6 +566,7 @@
 		94A278DC2C4D2D0B00DD8CF8 /* Transfer */ = {
 			isa = PBXGroup;
 			children = (
+				94A278E32C4D2D9400DD8CF8 /* Transfervm */,
 				9468F7062C5260D3001C3CC7 /* Coordinator */,
 				94A278DF2C4D2D4500DD8CF8 /* TransferView.swift */,
 				9468F7092C526312001C3CC7 /* IbanTextField.swift */,
@@ -583,13 +575,13 @@
 			path = Transfer;
 			sourceTree = "<group>";
 		};
-		94A278E32C4D2D9400DD8CF8 /* Transfer */ = {
+		94A278E32C4D2D9400DD8CF8 /* Transfervm */ = {
 			isa = PBXGroup;
 			children = (
 				94A278E42C4D2DA000DD8CF8 /* TransferViewModel.swift */,
 				947C84692C4FC43F00E7104B /* TransferViewModel+Protocol.swift */,
 			);
-			path = Transfer;
+			path = Transfervm;
 			sourceTree = "<group>";
 		};
 		94B229832C486C1200A8AE58 /* Home */ = {

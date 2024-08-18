@@ -60,7 +60,7 @@ class LoginViewModel: ObservableObject,LoginViewModelProtocol {
                 
                 switch result {
                 case .success(let user):
-                    print(user.accountId)
+                    print(user.accountIban)
                     completion(.success(user))
                     
                 case .failure(let error):
