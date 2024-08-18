@@ -38,6 +38,5 @@ struct AmountCard: View {
 }
 #Preview {
     AmountCard(amount: AmountCardType.fifty, action: {
-        print("Card tapped")
     }, isSelected: true)
 }

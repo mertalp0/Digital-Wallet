@@ -37,12 +37,14 @@
 		947C84722C4FC48D00E7104B /* RegisterViewModel+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C84712C4FC48D00E7104B /* RegisterViewModel+Protocol.swift */; };
 		947C84742C4FD17300E7104B /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C84732C4FD17300E7104B /* PaymentMethod.swift */; };
 		947C84772C4FD47D00E7104B /* CustomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C84762C4FD47D00E7104B /* CustomCard.swift */; };
+		94873B8B2C72B01000620B4A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94873B8A2C72B01000620B4A /* SplashView.swift */; };
+		94873B8F2C72B0B000620B4A /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94873B8E2C72B0B000620B4A /* SplashCoordinator.swift */; };
+		94873B932C72B22400620B4A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94873B922C72B22400620B4A /* AppCoordinator.swift */; };
+		94873B962C72B24200620B4A /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94873B952C72B24200620B4A /* BaseCoordinator.swift */; };
 		94899F2C2C4940C400CB103C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94899F2B2C4940C400CB103C /* UserService.swift */; };
 		948D7A4E2C4A3CAD00806D3F /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948D7A4D2C4A3CAD00806D3F /* UserServiceProtocol.swift */; };
 		948D7A502C4A3CC500806D3F /* AccountServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948D7A4F2C4A3CC500806D3F /* AccountServiceProtocol.swift */; };
 		948D7A542C4A6C2600806D3F /* GenerateIBAN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948D7A532C4A6C2600806D3F /* GenerateIBAN.swift */; };
-		948D7A572C4AA46D00806D3F /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = 948D7A562C4AA46D00806D3F /* Crypto */; };
-		948D7A592C4AA46D00806D3F /* _CryptoExtras in Frameworks */ = {isa = PBXBuildFile; productRef = 948D7A582C4AA46D00806D3F /* _CryptoExtras */; };
 		948D7A5B2C4AA5CE00806D3F /* EncryptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948D7A5A2C4AA5CE00806D3F /* EncryptionService.swift */; };
 		9492EE862C3FA5BF00FA0947 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE852C3FA5BF00FA0947 /* CardModel.swift */; };
 		9492EE882C3FA5D400FA0947 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492EE872C3FA5D400FA0947 /* LoginCoordinator.swift */; };
@@ -139,6 +141,10 @@
 		947C84712C4FC48D00E7104B /* RegisterViewModel+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewModel+Protocol.swift"; sourceTree = "<group>"; };
 		947C84732C4FD17300E7104B /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
 		947C84762C4FD47D00E7104B /* CustomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCard.swift; sourceTree = "<group>"; };
+		94873B8A2C72B01000620B4A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		94873B8E2C72B0B000620B4A /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		94873B922C72B22400620B4A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		94873B952C72B24200620B4A /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		94899F2B2C4940C400CB103C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		948D7A4D2C4A3CAD00806D3F /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
 		948D7A4F2C4A3CC500806D3F /* AccountServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceProtocol.swift; sourceTree = "<group>"; };
@@ -179,7 +185,7 @@
 		94A278EA2C4D48DC00DD8CF8 /* TransferServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferServiceProtocol.swift; sourceTree = "<group>"; };
 		94B229612C47215000A8AE58 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		94B2297B2C47F98800A8AE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		94B2297B2C47F98800A8AE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94B229842C486C1E00A8AE58 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		94B229862C486C3400A8AE58 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		94B229892C486C7F00A8AE58 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -199,9 +205,7 @@
 				9492EE972C3FACC000FA0947 /* FirebaseDatabase in Frameworks */,
 				9492EE992C3FACC000FA0947 /* FirebaseFirestore in Frameworks */,
 				9492EE932C3FACC000FA0947 /* FirebaseAnalytics in Frameworks */,
-				948D7A572C4AA46D00806D3F /* Crypto in Frameworks */,
 				9492EE9B2C3FACC100FA0947 /* FirebaseStorage in Frameworks */,
-				948D7A592C4AA46D00806D3F /* _CryptoExtras in Frameworks */,
 				9492EE952C3FACC000FA0947 /* FirebaseAuth in Frameworks */,
 				94765BC22C5BBD4A00A5801B /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -227,9 +231,9 @@
 		941B4EAB2C56A6EC000BFD87 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				94873B7E2C72765B00620B4A /* ViewModel */,
 				941B4EAC2C56A6FD000BFD87 /* Coordinator */,
 				94765BB52C5AA43D00A5801B /* View */,
-				941B4EB22C56A766000BFD87 /* CardsScene.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -240,15 +244,6 @@
 				941B4EB02C56A74F000BFD87 /* CardsCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		941B4EAD2C56A719000BFD87 /* Cards */ = {
-			isa = PBXGroup;
-			children = (
-				941B4EAE2C56A732000BFD87 /* CardsViewModel.swift */,
-				94765BBA2C5BB6A200A5801B /* CardsViewModel+Protocol.swift */,
-			);
-			path = Cards;
 			sourceTree = "<group>";
 		};
 		944398322C41390A00D8453E /* Enums */ = {
@@ -279,15 +274,6 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		9468F7082C5260EB001C3CC7 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				94B229612C47215000A8AE58 /* RegisterCoordinator.swift */,
-				9492EE872C3FA5D400FA0947 /* LoginCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 		94765BB02C5A773F00A5801B /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +285,7 @@
 		94765BB52C5AA43D00A5801B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				941B4EB22C56A766000BFD87 /* CardsScene.swift */,
 				94765BB62C5AA57B00A5801B /* PageControl.swift */,
 				94765BB32C5AA29E00A5801B /* TransactionView.swift */,
 				941B4EB42C56BC3D000BFD87 /* SetCardLimitView.swift */,
@@ -306,22 +293,138 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		947C846F2C4FC46B00E7104B /* Login */ = {
+		94873B7D2C7275E600620B4A /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				947C846D2C4FC46500E7104B /* LoginViewModel+Protocol.swift */,
-				94A1C3F52C3EC0160018D02F /* LoginViewModel.swift */,
+				94873B892C72B00300620B4A /* Splash */,
+				94A1C3E72C3EBC670018D02F /* Authentication */,
+				94B229832C486C1200A8AE58 /* Home */,
+				94A278DC2C4D2D0B00DD8CF8 /* Transfer */,
+				941B4EAB2C56A6EC000BFD87 /* Cards */,
 			);
-			path = Login;
+			path = Features;
 			sourceTree = "<group>";
 		};
-		947C84702C4FC47000E7104B /* Register */ = {
+		94873B7E2C72765B00620B4A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94765BBA2C5BB6A200A5801B /* CardsViewModel+Protocol.swift */,
+				941B4EAE2C56A732000BFD87 /* CardsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94873B7F2C72768700620B4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94A278DF2C4D2D4500DD8CF8 /* TransferView.swift */,
+				9468F70B2C527A8B001C3CC7 /* AmountCard.swift */,
+				9468F7092C526312001C3CC7 /* IbanTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94873B802C7276A600620B4A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94B229892C486C7F00A8AE58 /* HomeViewModel.swift */,
+				947C846B2C4FC45200E7104B /* HomeViewModel+Protocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94873B812C7276B700620B4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94B229842C486C1E00A8AE58 /* HomeView.swift */,
+				94B2298D2C49264C00A8AE58 /* ExpenseCard.swift */,
+				94B2298B2C491E4C00A8AE58 /* ActivityCard.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94873B832C7276D500620B4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3F22C3EBFEC0018D02F /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94873B842C7276DB00620B4A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3F52C3EC0160018D02F /* LoginViewModel.swift */,
+				947C846D2C4FC46500E7104B /* LoginViewModel+Protocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94873B852C7276EA00620B4A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9492EE872C3FA5D400FA0947 /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		94873B862C72772E00620B4A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				94A1C3F72C3EC0220018D02F /* RegisterViewModel.swift */,
 				947C84712C4FC48D00E7104B /* RegisterViewModel+Protocol.swift */,
 			);
-			path = Register;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		94873B872C72773400620B4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94A1C3F02C3EBFE00018D02F /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94873B882C72773800620B4A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				94B229612C47215000A8AE58 /* RegisterCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		94873B892C72B00300620B4A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				94873B8D2C72B09200620B4A /* View */,
+				94873B8C2C72B08600620B4A /* Coordinator */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		94873B8C2C72B08600620B4A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				94873B8E2C72B0B000620B4A /* SplashCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		94873B8D2C72B09200620B4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94873B8A2C72B01000620B4A /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94873B902C72B20300620B4A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				94873B922C72B22400620B4A /* AppCoordinator.swift */,
+				94873B952C72B24200620B4A /* BaseCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		94A1C3AE2C3EB1A40018D02F = {
@@ -347,10 +450,12 @@
 		94A1C3B92C3EB1A40018D02F /* DigitalWallet */ = {
 			isa = PBXGroup;
 			children = (
+				94B2297B2C47F98800A8AE58 /* Info.plist */,
+				94873B902C72B20300620B4A /* Coordinator */,
+				94873B7D2C7275E600620B4A /* Features */,
 				94FC13682C60C35000526F40 /* App */,
 				94765BB02C5A773F00A5801B /* Data */,
 				94A278D82C4D2B1400DD8CF8 /* Modifiers */,
-				94B2297B2C47F98800A8AE58 /* Info.plist */,
 				944398322C41390A00D8453E /* Enums */,
 				94A1C40A2C3EC4AF0018D02F /* Components */,
 				94A1C4072C3EC4780018D02F /* Extensions */,
@@ -380,35 +485,12 @@
 			path = DigitalWalletUITests;
 			sourceTree = "<group>";
 		};
-		94A1C3E42C3EBB130018D02F /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				941B4EAD2C56A719000BFD87 /* Cards */,
-				94B229882C486C7600A8AE58 /* Home */,
-				94A1C3F42C3EBFFA0018D02F /* Authentication */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		94A1C3E52C3EBB1B0018D02F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				941B4EAB2C56A6EC000BFD87 /* Cards */,
-				94A278DC2C4D2D0B00DD8CF8 /* Transfer */,
-				94B229832C486C1200A8AE58 /* Home */,
-				94A1C3E72C3EBC670018D02F /* Authentication */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		94A1C3E62C3EBC110018D02F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				9492EE9C2C3FAD0100FA0947 /* GoogleService-Info.plist */,
 				94A278D32C4C3E0400DD8CF8 /* Localizable.strings */,
-				94A1C3BA2C3EB1A40018D02F /* AppDelegate.swift */,
 				94A1C3BE2C3EB1A60018D02F /* Assets.xcassets */,
-				94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -416,7 +498,6 @@
 		94A1C3E72C3EBC670018D02F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				9468F7082C5260EB001C3CC7 /* Coordinator */,
 				94A1C3EA2C3EBCC30018D02F /* Register */,
 				94A1C3E92C3EBCBD0018D02F /* Login */,
 			);
@@ -426,7 +507,9 @@
 		94A1C3E92C3EBCBD0018D02F /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				94A1C3F22C3EBFEC0018D02F /* LoginView.swift */,
+				94873B832C7276D500620B4A /* View */,
+				94873B842C7276DB00620B4A /* ViewModel */,
+				94873B852C7276EA00620B4A /* Coordinator */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -434,18 +517,11 @@
 		94A1C3EA2C3EBCC30018D02F /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				94A1C3F02C3EBFE00018D02F /* RegisterView.swift */,
+				94873B872C72773400620B4A /* View */,
+				94873B862C72772E00620B4A /* ViewModel */,
+				94873B882C72773800620B4A /* Coordinator */,
 			);
 			path = Register;
-			sourceTree = "<group>";
-		};
-		94A1C3F42C3EBFFA0018D02F /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				947C84702C4FC47000E7104B /* Register */,
-				947C846F2C4FC46B00E7104B /* Login */,
-			);
-			path = Authentication;
 			sourceTree = "<group>";
 		};
 		94A1C3F92C3EC0310018D02F /* Services */ = {
@@ -566,40 +642,28 @@
 		94A278DC2C4D2D0B00DD8CF8 /* Transfer */ = {
 			isa = PBXGroup;
 			children = (
-				94A278E32C4D2D9400DD8CF8 /* Transfervm */,
+				94873B7F2C72768700620B4A /* View */,
+				94A278E32C4D2D9400DD8CF8 /* ViewModel */,
 				9468F7062C5260D3001C3CC7 /* Coordinator */,
-				94A278DF2C4D2D4500DD8CF8 /* TransferView.swift */,
-				9468F7092C526312001C3CC7 /* IbanTextField.swift */,
-				9468F70B2C527A8B001C3CC7 /* AmountCard.swift */,
 			);
 			path = Transfer;
 			sourceTree = "<group>";
 		};
-		94A278E32C4D2D9400DD8CF8 /* Transfervm */ = {
+		94A278E32C4D2D9400DD8CF8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				94A278E42C4D2DA000DD8CF8 /* TransferViewModel.swift */,
 				947C84692C4FC43F00E7104B /* TransferViewModel+Protocol.swift */,
 			);
-			path = Transfervm;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		94B229832C486C1200A8AE58 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				94873B812C7276B700620B4A /* View */,
+				94873B802C7276A600620B4A /* ViewModel */,
 				9468F7072C5260E3001C3CC7 /* Coordinator */,
-				94B2298B2C491E4C00A8AE58 /* ActivityCard.swift */,
-				94B229842C486C1E00A8AE58 /* HomeView.swift */,
-				94B2298D2C49264C00A8AE58 /* ExpenseCard.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		94B229882C486C7600A8AE58 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				94B229892C486C7F00A8AE58 /* HomeViewModel.swift */,
-				947C846B2C4FC45200E7104B /* HomeViewModel+Protocol.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -607,8 +671,8 @@
 		94FC13682C60C35000526F40 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				94A1C3E52C3EBB1B0018D02F /* Views */,
-				94A1C3E42C3EBB130018D02F /* ViewModels */,
+				94A1C3BA2C3EB1A40018D02F /* AppDelegate.swift */,
+				94B229632C47C6EC00A8AE58 /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -635,8 +699,6 @@
 				9492EE962C3FACC000FA0947 /* FirebaseDatabase */,
 				9492EE982C3FACC000FA0947 /* FirebaseFirestore */,
 				9492EE9A2C3FACC100FA0947 /* FirebaseStorage */,
-				948D7A562C4AA46D00806D3F /* Crypto */,
-				948D7A582C4AA46D00806D3F /* _CryptoExtras */,
 				94765BC12C5BBD4A00A5801B /* FirebaseFirestoreSwift */,
 			);
 			productName = DigitalWallet;
@@ -713,7 +775,6 @@
 			mainGroup = 94A1C3AE2C3EB1A40018D02F;
 			packageReferences = (
 				9492EE912C3FACC000FA0947 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				948D7A552C4AA46C00806D3F /* XCRemoteSwiftPackageReference "swift-crypto" */,
 			);
 			productRefGroup = 94A1C3B82C3EB1A40018D02F /* Products */;
 			projectDirPath = "";
@@ -779,12 +840,14 @@
 				94A278CD2C4C153000DD8CF8 /* UserServiceError.swift in Sources */,
 				9492EE8C2C3FA63100FA0947 /* Validator.swift in Sources */,
 				94765BB42C5AA29E00A5801B /* TransactionView.swift in Sources */,
+				94873B8F2C72B0B000620B4A /* SplashCoordinator.swift in Sources */,
 				94A278E92C4D484400DD8CF8 /* TransferService.swift in Sources */,
 				941B4EB32C56A766000BFD87 /* CardsScene.swift in Sources */,
 				947C84662C4F82E200E7104B /* String+IbanFormat.swift in Sources */,
 				9468F70C2C527A8B001C3CC7 /* AmountCard.swift in Sources */,
 				94A1C3FF2C3EC11D0018D02F /* AuthenticationServiceProtocol.swift in Sources */,
 				947C84722C4FC48D00E7104B /* RegisterViewModel+Protocol.swift in Sources */,
+				94873B8B2C72B01000620B4A /* SplashView.swift in Sources */,
 				94C7F4A32C4A359B00B91D92 /* AccountModel.swift in Sources */,
 				94BFF1BF2C4EAB13007E5FAB /* TransferServiceError.swift in Sources */,
 				94A1C3F82C3EC0220018D02F /* RegisterViewModel.swift in Sources */,
@@ -816,6 +879,7 @@
 				94C7F4A12C4A340500B91D92 /* AccountService .swift in Sources */,
 				94A278E72C4D41ED00DD8CF8 /* TransferModel.swift in Sources */,
 				941B4EB12C56A74F000BFD87 /* CardsCoordinator.swift in Sources */,
+				94873B932C72B22400620B4A /* AppCoordinator.swift in Sources */,
 				94765BB72C5AA57B00A5801B /* PageControl.swift in Sources */,
 				94A278EB2C4D48DC00DD8CF8 /* TransferServiceProtocol.swift in Sources */,
 				94A1C3F62C3EC0160018D02F /* LoginViewModel.swift in Sources */,
@@ -824,6 +888,7 @@
 				94A278D22C4C3D8000DD8CF8 /* LocalizedStrings.swift in Sources */,
 				94B229852C486C1E00A8AE58 /* HomeView.swift in Sources */,
 				94A1C3FD2C3EC0AF0018D02F /* AuhtenticationService.swift in Sources */,
+				94873B962C72B24200620B4A /* BaseCoordinator.swift in Sources */,
 				94765BC02C5BB72C00A5801B /* CardServiceProtocol.swift in Sources */,
 				94B2298E2C49264C00A8AE58 /* ExpenseCard.swift in Sources */,
 				94A278E22C4D2D7600DD8CF8 /* TransferCoordinator.swift in Sources */,
@@ -1163,14 +1228,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		948D7A552C4AA46C00806D3F /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-crypto.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.5.2;
-			};
-		};
 		9492EE912C3FACC000FA0947 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -1186,16 +1243,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9492EE912C3FACC000FA0947 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
-		};
-		948D7A562C4AA46D00806D3F /* Crypto */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 948D7A552C4AA46C00806D3F /* XCRemoteSwiftPackageReference "swift-crypto" */;
-			productName = Crypto;
-		};
-		948D7A582C4AA46D00806D3F /* _CryptoExtras */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 948D7A552C4AA46C00806D3F /* XCRemoteSwiftPackageReference "swift-crypto" */;
-			productName = _CryptoExtras;
 		};
 		9492EE922C3FACC000FA0947 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

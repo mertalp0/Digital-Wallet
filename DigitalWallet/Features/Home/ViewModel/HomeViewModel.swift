@@ -9,10 +9,9 @@ import SwiftUI
 
 class HomeViewModel: ObservableObject, HomeViewModelProtocol {
 
-    
     @Published var user: UserModel?
     @Published var account: Account?
-    @Published var isLoading: Bool = false // Add this line
+    @Published var isLoading: Bool = false
     
     private let userService: UserServiceProtocol
     private let accountService: AccountServiceProtocol
@@ -40,7 +39,7 @@ class HomeViewModel: ObservableObject, HomeViewModelProtocol {
        }
     
     func fetchUser() {
-        isLoading = true // Start loading
+        isLoading = true
         userService.fetchUser { [weak self] user, error in
             DispatchQueue.main.async {
                 if let error = error {
@@ -49,7 +48,7 @@ class HomeViewModel: ObservableObject, HomeViewModelProtocol {
                     self?.fetchAccountInfo(accountId: user!.accountIban)
                     self?.user = user
                 }
-                self?.isLoading = false // End loading
+                self?.isLoading = false 
             }
         }
     }

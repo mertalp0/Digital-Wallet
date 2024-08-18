@@ -7,22 +7,26 @@
 
 
 import SwiftUI
+import UIKit
+import Foundation
 
 final class LoginCoordinator {
 
-    private let navigationController: UINavigationController = {
-        let navigationController = UINavigationController()
-        navigationController.navigationBar.prefersLargeTitles = true
-        return navigationController
-    }()
+    var navigationController: UINavigationController
+       
+       init(navigationController: UINavigationController) {
+           self.navigationController = navigationController
+       }
+       
+       func start() {
+           let loginViewModel = LoginViewModel(onTapRegister: pushRegisterView, onTapHome: pushHomeView)
+
+           let loginView = LoginView(viewModel: loginViewModel).navigationBarBackButtonHidden(true)
+           let loginViewController = UIHostingController(rootView: loginView)
+           navigationController.pushViewController(loginViewController, animated: true)
+       }
+
     
-    func makeViewController() -> UIViewController {
-        let viewModel = LoginViewModel(onTapRegister: pushRegisterView , onTapHome: pushHomeView)
-        let loginView = LoginView(viewModel: viewModel)
-        let hostingVC = UIHostingController(rootView: loginView)
-        navigationController.setViewControllers([hostingVC], animated: false)
-        return navigationController
-    }
     func pushRegisterView() {
         let coordinator = RegisterCoordinator(navigationController: navigationController)
         let registerView = coordinator.makeViewController()

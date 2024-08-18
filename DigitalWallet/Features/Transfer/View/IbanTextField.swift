@@ -11,7 +11,7 @@ struct IbanTextField: View {
     @FocusState private var isFocused: Bool
 
     private let prefix: String = "TR"
-    private let maxCharacters = 24
+    private let maxCharacters = 22
 
     var body: some View {
         VStack(alignment: .trailing, spacing: 8) {
@@ -22,7 +22,7 @@ struct IbanTextField: View {
                 TextField("", text: $text)
                     .padding(.leading, 4)
                     .onChange(of: text) { newValue in
-                        if (newValue.count<=32){
+                        if (newValue.count<=24){
                             print(newValue.count)
                             let formattedText = formatIban(newValue)
                             limitText(formattedText)

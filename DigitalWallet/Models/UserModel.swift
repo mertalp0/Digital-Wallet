@@ -13,13 +13,15 @@ struct UserModel : Codable  {
     var email: String
     var accountIban: String
     var cards: [String]
+    var password: String?
     
-    init(id: String, fullName: String, email: String, accountIban: String, cards: [String]) {
+    init(id: String, fullName: String, email: String, accountIban: String, cards: [String] , password : String?) {
         self.id = id
         self.fullName = fullName
         self.email = email
         self.accountIban = accountIban
         self.cards = cards
+        self.password = password
     }
     
 

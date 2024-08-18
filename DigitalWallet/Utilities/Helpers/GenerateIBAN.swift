@@ -15,3 +15,4 @@ func generateRandomIBAN() -> String {
     let iban = countryCode + checkDigits + bankCode + branchCode + accountNumber
     return iban
 }
+

@@ -79,7 +79,6 @@ class AuthenticationService: AuthenticationServiceProtocol {
             
             self.accountService.addAccount { account, error in
                 if let error = error {
-                    print(error)
                     completion(.failure(AuthenticationServiceError(type: .accountCreationFailed)))
                     return
                 }
@@ -89,13 +88,25 @@ class AuthenticationService: AuthenticationServiceProtocol {
                     return
                 }
                 
+        
                 guard let encryptedPassword = self.encryptionService.encrypt(plainText: password) else {
                     completion(.failure(AuthenticationServiceError(type: .encryptionFailed)))
                     return
                 }
                 
-                let userData: [String: Any] = ["id": user.uid, "fullname": fullname, "email": email, "password": encryptedPassword, "accountIban": account.iban, "cards": []]
-                self.db.collection("users").document(user.uid).setData(userData) { error in
+                // Kullanıcı verilerini modelle oluşturun
+                let userModel = UserModel(id: user.uid, fullName: fullname, email: email, accountIban: account.iban, cards: [], password: encryptedPassword)
+                
+                let userData: [String: Any] = [
+                    "id": userModel.id,
+                    "fullName": userModel.fullName,
+                    "email": userModel.email,
+                    "accountIban": userModel.accountIban,
+                    "cards": userModel.cards,
+                    "password" : userModel.password!
+                ]
+                
+                self.db.collection("users").document(userModel.id).setData(userData) { error in
                     if let error = error {
                         completion(.failure(AuthenticationServiceError(type: .firebaseError(error))))
                         return

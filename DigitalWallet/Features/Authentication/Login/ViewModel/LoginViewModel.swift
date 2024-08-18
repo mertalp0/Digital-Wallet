@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUI
 
 
-class LoginViewModel: ObservableObject,LoginViewModelProtocol {
+class LoginViewModel: LoginViewModelProtocol {
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var alertMessage: String = ""
