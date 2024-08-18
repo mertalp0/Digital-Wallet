@@ -46,7 +46,7 @@ class HomeViewModel: ObservableObject, HomeViewModelProtocol {
                 if let error = error {
                     print("Error fetching user: \(error.localizedDescription)")
                 } else {
-                    self?.fetchAccountInfo(accountId: user!.accountId)
+                    self?.fetchAccountInfo(accountId: user!.accountIban)
                     self?.user = user
                 }
                 self?.isLoading = false // End loading

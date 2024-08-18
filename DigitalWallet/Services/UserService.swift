@@ -4,7 +4,7 @@
 //
 //  Created by mert alp on 18.07.2024.
 //
-import Foundation
+
 import FirebaseAuth
 import FirebaseFirestore
 
@@ -15,7 +15,6 @@ class UserService: UserServiceProtocol {
     static let shared = UserService()
     @Published var user: UserModel?
 
-    
     init(authService: AuthenticationServiceProtocol = AuthenticationService.shared) {
         self.authService = authService
     }
@@ -32,15 +31,15 @@ class UserService: UserServiceProtocol {
                 return
             }
             if let snapshot = snapshot, snapshot.exists {
-                if let data = snapshot.data(),
-                   let fullName = data["fullname"] as? String,
-                   let email = data["email"] as? String,
-                   let accountId = data["accountIban"] as? String,
-                   let cards = data["cards"] as? [String] {
-                    
-                    let user = UserModel(id: userId, fullName: fullName, email: email, accountId: accountId, cards: cards)
-                    UserService.shared.user = user
-                    completion(user, nil)
+                if let data = snapshot.data() {
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: data, options: [])
+                        let user = try JSONDecoder().decode(UserModel.self, from: jsonData)
+                        UserService.shared.user = user
+                        completion(user, nil)
+                    } catch {
+                        completion(nil, UserServiceError(type: .userDataCorrupted))
+                    }
                 } else {
                     completion(nil, UserServiceError(type: .userDataCorrupted))
                 }

@@ -7,18 +7,20 @@
 
 import Foundation
 
-struct UserModel {
+struct UserModel : Codable  {
     var id: String
     var fullName: String
     var email: String
-    var accountId : String
-    var cards : [String]
+    var accountIban: String
+    var cards: [String]
     
-    init(id: String, fullName: String, email: String , accountId : String , cards:[String]) {
+    init(id: String, fullName: String, email: String, accountIban: String, cards: [String]) {
         self.id = id
         self.fullName = fullName
         self.email = email
-        self.accountId = accountId
+        self.accountIban = accountIban
         self.cards = cards
     }
+    
+
 }

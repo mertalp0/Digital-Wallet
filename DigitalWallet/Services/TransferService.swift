@@ -14,14 +14,14 @@ class TransferService: TransferServiceProtocol {
         
         let transferData: [String: Any] = [
             "iban": iban,
-            "senderAccountId": senderUser.accountId,
+            "senderAccountId": senderUser.accountIban,
             "amount": amount,
             "date": Timestamp(date: date),
             "type": type,
             "description": description
         ]
         
-        let senderAccountRef = db.collection("account").document(senderUser.accountId)
+        let senderAccountRef = db.collection("account").document(senderUser.accountIban)
         let receiverAccountRef = db.collection("account").document(iban)
         
         db.runTransaction({ (transaction, errorPointer) -> Any? in

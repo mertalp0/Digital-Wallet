@@ -50,17 +50,14 @@ class AuthenticationService: AuthenticationServiceProtocol {
                         return
                     }
                     
-                    guard let id = data["id"] as? String,
-                          let fullName = data["fullname"] as? String,
-                          let email = data["email"] as? String,
-                          let accountId = data["accountIban"] as? String,
-                          let cards = data["cards"] as? [String] else {
+                    // JSONDecoder ile veri çekme
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: data, options: [])
+                        let userModel = try JSONDecoder().decode(UserModel.self, from: jsonData)
+                        completion(.success(userModel))
+                    } catch {
                         completion(.failure(AuthenticationServiceError(type: .firebaseDataCorrupted)))
-                        return
                     }
-                    
-                    let currentUser = UserModel(id: id, fullName: fullName, email: email, accountId: accountId, cards: cards)
-                    completion(.success(currentUser))
                 }
             } else {
                 completion(.failure(AuthenticationServiceError(type: .emailNotVerified)))
